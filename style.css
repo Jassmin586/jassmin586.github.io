@@ -1,0 +1,48 @@
+html, body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
+
+.main {
+	box-sizing: border-box;
+	display: block;
+	text-align: center;
+	min-height:100%;
+	position: relative;
+}
+
+h1 {
+	text-transform: uppercase;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 40px; 
+}
+
+nav {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.reference-to-project {
+	width: 200px;
+	height: 200px;
+	border-radius: 100px;
+	background-color: #BEDEDE;
+	display: inline-block;
+}
+
+	.reference-to-project a{
+		font-size: 18px;
+		line-height: 200px;
+	}
+	
+footer {
+	position:absolute;
+	bottom:0;
+	width:100%;
+	height:60px;
+}
