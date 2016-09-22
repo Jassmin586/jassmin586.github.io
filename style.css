@@ -15,21 +15,21 @@ html, body {
 h1 {
 	text-transform: uppercase;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 40px; 
+	font-size: 40px;
+	position: relative; 
 }
 
 nav {
 	position: absolute;
-	top: 0;
-	right: 0;
-	left: 0;
-	bottom: 0;
-	margin: auto;
+	width: 100%;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 .reference-to-project {
 	width: 200px;
 	height: 200px;
+	margin: 0 10px;
 	border-radius: 100px;
 	background-color: #BEDEDE;
 	display: inline-block;
