@@ -13,13 +13,14 @@ src:url(fonts/MinionPro-It.otf);
 
 header {
 	width: 100%;
-	height: 30%;
+	height: 125px;
 	position: fixed;
+	z-index: 1;
 }
 	
 	header .header-background {
 		background-color: #6c5468;
-		height: 80px;
+		height: 75px;
 		width: 100%;	
 	}
 
@@ -38,7 +39,7 @@ header {
 		right: 0;
 	}
 
-		header .header-background nav ol{
+		.header-background nav ol{
 			list-style: none;
 			display: block;
 			left: 50%;
@@ -46,7 +47,7 @@ header {
 			float: left;
 		}
 
-			header .header-background nav ol li{
+			nav ol li{
 				float: left;
 				margin: 50px;
 				font-family: MinionPro, sans-serif;
@@ -57,33 +58,54 @@ header {
 				right: 50%;
 			}
 
-				header .header-background nav ol li:nth-of-type(4){
+				nav ol li:nth-of-type(4){
 					margin-left: 170px;
 				}
 
-				header .header-background nav ol li:hover{
+				nav ol li:hover{
 					cursor: pointer;
 					text-decoration: underline;
 				}
 
 main{
 	background-color: #fff;
+	position: relative;
+	top: 100px;
 }
-
-	main img{
+	
+	main .banner{
 		width: 100%;
-		height: 70%;
-		margin-top: 8%;
 	}
-
-	main .intro{
+	
+		main .banner .banner-quotation{
+			position: absolute;
+			top: 150px;
+			left: 30%;
+			width: 40%;
+			height: 480px;
+			text-align: center;
+		}
+		
+			.banner .banner-quotation p{
+				font-size: 40px;
+				color: #FFF;
+			}
+		
+			.banner .banner-img img {
+				width: 100%;
+				height: 480px;
+				filter: brightness(50%);
+			}
+	
+	
+	main section.intro{
 		background-color: #fafafa;
 		width: 100%;
 		height: 320px;
 		padding-top: 50px;
 	}
 
-		main .intro img{
+		main section.intro img{
 			margin: 0 auto 50px auto;
 			left: 0;
 			right: 0;
@@ -96,7 +118,7 @@ main{
 			height: 140px;
 		}
 
-		main .intro p.intro-text{
+		main section.intro p.intro-text{
 			font-family: MinionPro, sans-serif;
 			color: #979797;
 			font-size: 30px;
@@ -111,7 +133,16 @@ main{
 		height: 80px;
 	}
 	
-		main .posts .border-pointer{
+	main article,
+	main blockquote,
+	main figure{
+		display: inline-block;
+		text-align: center;
+		margin: 50px 0;
+		width: 100%;
+	}
+	
+		main .border-pointer{
 				border: 1px solid #dfdfdf;
 				background-color: #fff;
 				padding: 5px;
@@ -119,42 +150,121 @@ main{
 				height: 80px;
 				border-radius: 80px;
 				display: block;
-				margin: 50px auto;
+				margin: 0 auto;
 			}
 		
-			main .posts  .border-pointer .pointer{
+			.border-pointer .pointer{
 				width: 80px;
 				height: 80px;
 				background-color: #946d8d;
 				border-radius: 80px;
 			}
 
-				main .posts  .border-pointer .pointer img{
+				.border-pointer .pointer img{
 					width: 40%;
-					height: 50%;
 					display: block;
 					margin: 0 auto;
 					position: relative;
-					top: 20px;
+					top: 50%;
+					transform: translateY(-50%);
 				}
 
-				main .posts h1{
-					text-transform: uppercase;
-					font-family: MinionPro, sans-serif;
-					font-size: 16px;
-					display: inline-block;
-					text-align: center;
-					width: 100%;
-				}
+		main article h1{
+			text-transform: uppercase;
+			font-family: 'Crimson Text', serif;
+			font-size: 16px;
+			display: block;
+		}
+		
+		main article h1,
+		main blockquote p:first-of-type,
+		main figure .border-image,
+		main article .border-video{
+			width: 100%;
+			margin-top: 50px;
+		}
 
-				main .posts p{
-					text-align: center;
-					width: 17%;
-					position: relative;
-					left: 41.5%;
-					font-family: MinionPro, sans-serif;
-					font-size: 16px;
-					margin-top: 20px;
-				}
-
+		main p{
+			font-family: 'Crimson Text', serif;
+			font-size: 16px;
+  	        color: rgb(125, 125, 125);
+		}
+		
+		main article p{
+			width: 17%;
+			position: relative;
+			left: 41.5%;
+			margin-top: 20px;
+		}
+		
+		
+		main time{
+			font-size: 16px;
+			font-family: 'Crimson Text', serif;
+			color: rgb(69, 69, 69);
+			font-style: italic;
+			line-height: 2.25;
+		}
+		
+	 	main .share{
+	 		display: block;
+	 		margin-top: 5px;
+	 	}
+	 	
+	 		main .share a{
+	 			display: inline-block;
+	 		}
+	 		
+	 			.share a img{
+	 				width: 50%;
+	 			}
+	 			
+	 	main hr{
+	 		width: 6%;
+	 		display: block;
+	 		margin: 20px auto 0 auto;
+	 	}
+	 	
+			figure .border-image img{
+			width: 30%;
+			}
 			
+			figure .border-image img,
+			article .border-video video{
+			border: 1px solid #dfdfdf;
+			padding: 10px;
+			background-color: #fff;
+			}
+		
+	footer{
+		display: inline-block;
+		text-align: center;
+		width: 100%;
+		position: relative;
+		top: 100px;
+	}
+					
+		footer .share-icons{
+			background: #6c5468;
+			width: 100%;
+			display: block;
+			padding: 80px 0;
+		}
+			
+			footer .share-icons a{
+				display: inline-block;
+				margin-right: 5px;
+			}
+			
+			footer .share-icons a:last-of-type{
+				margin-right: 0;
+			}
+			
+		footer .copyright-text{
+			padding: 80px 0;
+		}
+		
+			footer .copyright-text p{
+				font-size: 22px;
+				font-family: MinionPro;
+			}	
