@@ -1,48 +1,199 @@
-html, body {
+body {
    margin:0;
    padding:0;
-   height:100%;
+   height:100vh;
+   background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+   rgba(0, 0, 0, 0.3)),
+   url("Graphics/sunset.jpg");
+   background-size: 100% 100%;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   font-family: 'Forum', cursive;
 }
 
-.main {
-	box-sizing: border-box;
-	display: block;
-	text-align: center;
-	min-height:100%;
-	position: relative;
-}
+  header {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    width: 30%;
+    margin-left: 5%;
+    padding: 1.5%;
+    box-sizing: border-box;
+    text-align: center;
+    position: fixed;
+    margin-top: 5%;
+  }
 
-h1 {
-	text-transform: uppercase;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 40px;
-	position: relative; 
-}
+    header img {
+      width: 50%;
+      border-radius: 50%;
+      border: 2px solid rgba(232, 185, 141, 1);
+      box-shadow: 0px 0px 20px 3px #FFF;
+    }
 
-nav {
-	position: absolute;
-	width: 100%;
-	top: 50%;
-	transform: translateY(-50%);
-}
+    header p {
+      font-size: 30px;
+      font-weight: bolder;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
 
-.reference-to-project {
-	width: 200px;
-	height: 200px;
-	margin: 0 10px;
-	border-radius: 100px;
-	background-color: #BEDEDE;
-	display: inline-block;
-}
+    header ul {
+      list-style: none;
+      padding: 0;
+    }
 
-	.reference-to-project a{
-		font-size: 18px;
-		line-height: 200px;
-	}
-	
-footer {
-	position:absolute;
-	bottom:0;
-	width:100%;
-	height:60px;
-}
+      header ul li {
+        display: block;
+      }
+
+        ul li a {
+          display: block;
+          color: #000;
+          text-decoration: none;
+          font-size: 28px;
+          padding: 10px 0;
+          transition: 0.3s;
+        }
+
+          ul li a:hover {
+            background-color: #FFF;
+            transform: scale(1.2, 1.2);
+            border-radius: 3px;
+          }
+
+  header,
+  main {
+    display: block;
+    height: 75%;
+  }
+
+  main {
+    float: right;
+    width: 60%;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+  }
+
+    main section > :not(h1) {
+      padding-left: 30px;
+    }
+
+      main section h1 {
+        text-align: left;
+        margin-top: 0;
+        padding: 25px 0 0 30px;
+        font-size: 32px;
+        border-bottom: 6px double #FFF;
+        border-top: 3px solid #FFF;
+        color: #FFF;
+        background-color: rgba(33, 33, 33, 0.6);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 36px;
+        font-family: 'Gochi Hand', cursive;
+      }
+
+  /*Projekty*/
+    main section.projects {
+      background-color: rgba(83, 112, 130, 0.8);
+      height: 100vh;
+    }
+
+      main section.projects .blog,
+      main section.projects .psd {
+        display: block;
+        width: 100%;
+        margin-bottom: 30px;
+      }
+
+        main section.projects .interactive-image {
+          position: relative;
+          width: 50%;
+          display: inline-block;
+        }
+
+          section.projects .interactive-image img {
+            width: 100%;
+            box-sizing: border-box;
+            border: 2px solid #FFF;
+            display: inline-block;
+            display: block;
+          }
+
+            section.projects .interactive-image:hover .mask {
+              visibility: visible;
+              opacity: 0.9;
+            }
+
+            section.projects .interactive-image .mask {
+              visibility: hidden;
+              background-color: #FFF;
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              opacity: 0;
+              transition: visibility .7s, opacity .7s ease;
+            }
+
+              section.projects .interactive-image .mask::after {
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                position: absolute;
+                content: " ";
+              }
+
+                .psd .interactive-image .mask::after {
+                  background-image: url("Graphics/harbour-tech.png");
+                }
+
+                .blog .interactive-image .mask::after {
+                  background-image: url("Graphics/pbd-tech.png");
+                }
+
+
+        main section.projects p {
+          display: inline-block;
+          vertical-align: top;
+          margin-left: 10px;
+          width: 40%;
+        }
+
+  /*Kontakt*/
+    main section.contact {
+      background-color: rgba(241, 148, 91, 0.8);
+    }
+
+      main section.contact p {
+        font-size: 20px;
+      }
+
+        main section.contact p.e-mail::before {
+          font-family: FontAwesome;
+          content: "\f0e0";
+        }
+
+        main section.contact p.linkedin::before {
+          font-family: FontAwesome;
+          content: "\f08c";
+        }
+
+        main section.contact p.city::before {
+          font-family: FontAwesome;
+          content: "\f015";
+        }
+
+        section.contact form label {
+          display: block;
+        }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 30%;
+    left: 5%;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
