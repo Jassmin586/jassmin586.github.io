@@ -1,8 +1,10 @@
+$(document).ready( function() {
 
-console.log($(this).find('ul li a').attr('href'));
-$('ul li a').click(function(evt){
-    if(evt.target.getAttribute('href') == '#contact')
-      $("html").animate( {
-        scrollTop: $("main section:nth-of-type(2)").offset().top
-      }, 400);
+  $('ul li a').click(function(){
+    var i = $('ul li a').index(this)+1;
+      $("html, body").animate( {
+          scrollTop: $("main section:nth-of-type("+i+")").offset().top
+        }, 400);
+  });
+
 });
