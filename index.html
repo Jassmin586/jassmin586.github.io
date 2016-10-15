@@ -62,18 +62,21 @@
 						<img src="Graphics/harbour.png" alt="Screenshot Harbour" />
 						<div class="mask"></div>
 					</div>
-					<p>Opis</p>
+					<p>Wykonanie szablonu portfolia na podstawie PSD Harbour.</p>
 				</div>
 			</section>
 			<section class="contact">
 				<h1>Kontakt</h1>
 				<p class="e-mail">E-mail</p>
-				<p class="linkedin">Linkedin</p>
+				<p class="linkedin"><a href="https://pl.linkedin.com/in/joanna-rz%C4%85dkowska-94ba55117">LinkedIn</a></p>
 				<p class="city">Poznań</p>
 				<form class="kontakt" action="index.html" method="post">
-					<label>Twoje imię i nazwisko <input type="text" name="name" required title="Proszę wpisać swoje imię i nazwisko" /></label>
-					<label>Twój e-mail <input type="email" name="email" required /></label>
-					<label>Twoja wiadomość<textarea name="content" title="Proszę wypełnić to pole" required></textarea></label>
+					<label>Forumlarz kontaktowy</label>
+					<input type="text" name="name" placeholder="Twoje imię i nazwisko" required title="Proszę wpisać swoje imię i nazwisko" />
+					<input type="email" placeholder="Twój e-mail" name="email" required />
+					<textarea name="content" placeholder="Twoja wiadomość" title="Proszę wypełnić to pole" required></textarea>
+					<input type="radio" name="send-copy"/><label name="send">Wyślij mi kopię na mój e-mail</label>
+					<button type="submit" name="submit-btn">Wyślij</button>
 				</form>
 			</section>
 		</main>
