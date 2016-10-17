@@ -1,13 +1,12 @@
-<?PHP
-	$adresat = 'joannarz52@gmail.com'; 	// pod ten adres zostanie wysłana 							// wiadomosc
-  @$name = $_POST['name'];
-  @$email = $_POST['email'];
-	@$content = $_POST['content'];
-	$header = 	"From: ktos@serwer.pl \nContent-Type:".
-			' text/plain;charset="iso-8859-2"'.
-			"\nContent-Transfer-Encoding: 8bit";
-	if (mail($adresat, 'List ze strony', $content, $header))
-		echo '<p>działa</p>';
-	else
-		echo '<p><b>NIE</b> wysłano maila!</p>';
+<?php
+if($_POST["submit"]) {
+$addressee = "joannarz52@gmail.com";
+$name = $_POST ["yourName"];
+$email = $_POST["yourEmail"];
+$content = $_POST["yourPhone"];
+
+$mailBody="Name: $name\nEmail: $email\n\n$content";
+mail($addressee, $mailBody, "From: $name <$email>");
+$thankYou="<p>Dziękuję za wysłanie wiadomości</p>";
+}
 ?>
