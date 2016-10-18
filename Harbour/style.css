@@ -17,11 +17,11 @@ header {
 	position: fixed;
 	z-index: 1;
 }
-	
+
 	header .header-background {
 		background-color: #6c5468;
 		height: 75px;
-		width: 100%;	
+		width: 100%;
 	}
 
 	header .header-waves {
@@ -72,11 +72,11 @@ main{
 	position: relative;
 	top: 100px;
 }
-	
+
 	main .banner{
 		width: 100%;
 	}
-	
+
 		main .banner .banner-quotation{
 			position: absolute;
 			top: 150px;
@@ -85,19 +85,19 @@ main{
 			height: 480px;
 			text-align: center;
 		}
-		
+
 			.banner .banner-quotation p{
 				font-size: 40px;
 				color: #FFF;
 			}
-		
+
 			.banner .banner-img img {
 				width: 100%;
 				height: 480px;
 				filter: brightness(50%);
 			}
-	
-	
+
+
 	main section.intro{
 		background-color: #fafafa;
 		width: 100%;
@@ -132,7 +132,7 @@ main{
 		width: 100%;
 		height: 80px;
 	}
-	
+
 	main article,
 	main blockquote,
 	main figure{
@@ -141,7 +141,7 @@ main{
 		margin: 50px 0;
 		width: 100%;
 	}
-	
+
 		main .border-pointer{
 				border: 1px solid #dfdfdf;
 				background-color: #fff;
@@ -152,7 +152,7 @@ main{
 				display: block;
 				margin: 0 auto;
 			}
-		
+
 			.border-pointer .pointer{
 				width: 80px;
 				height: 80px;
@@ -175,7 +175,7 @@ main{
 			font-size: 16px;
 			display: block;
 		}
-		
+
 		main article h1,
 		main blockquote p:first-of-type,
 		main figure .border-image,
@@ -189,15 +189,15 @@ main{
 			font-size: 16px;
   	        color: rgb(125, 125, 125);
 		}
-		
+
 		main article p{
 			width: 17%;
 			position: relative;
 			left: 41.5%;
 			margin-top: 20px;
 		}
-		
-		
+
+
 		main time{
 			font-size: 16px;
 			font-family: 'Crimson Text', serif;
@@ -205,37 +205,37 @@ main{
 			font-style: italic;
 			line-height: 2.25;
 		}
-		
+
 	 	main .share{
 	 		display: block;
 	 		margin-top: 5px;
 	 	}
-	 	
+
 	 		main .share a{
 	 			display: inline-block;
 	 		}
-	 		
+
 	 			.share a img{
 	 				width: 50%;
 	 			}
-	 			
+
 	 	main hr{
 	 		width: 6%;
 	 		display: block;
 	 		margin: 20px auto 0 auto;
 	 	}
-	 	
+
 			figure .border-image img{
 			width: 30%;
 			}
-			
+
 			figure .border-image img,
 			article .border-video video{
 			border: 1px solid #dfdfdf;
 			padding: 10px;
 			background-color: #fff;
 			}
-		
+
 	footer{
 		display: inline-block;
 		text-align: center;
@@ -243,28 +243,92 @@ main{
 		position: relative;
 		top: 100px;
 	}
-					
+
 		footer .share-icons{
 			background: #6c5468;
 			width: 100%;
 			display: block;
 			padding: 80px 0;
 		}
-			
+
 			footer .share-icons a{
 				display: inline-block;
 				margin-right: 5px;
 			}
-			
+
 			footer .share-icons a:last-of-type{
 				margin-right: 0;
 			}
-			
+
 		footer .copyright-text{
 			padding: 80px 0;
 		}
-		
+
 			footer .copyright-text p{
 				font-size: 22px;
 				font-family: MinionPro;
-			}	
+			}
+
+/*------------------------------------------------------------
+MOBILE
+------------------------------------------------------------	*/
+
+@media all and (max-width: 768px){
+		header .header-background {
+			height: 50px;
+			width: 50px;
+			display: block;
+			float: right;
+		}
+
+			.header-background nav {
+				display: none;
+				width: 100vw;
+				min-height: 342px;
+			}
+
+				.header-background nav::after {
+					background-image: url("graphics/menu.svg");
+					position: absolute;
+					right: 10px;
+					top: 3px;
+					z-index: 1;
+					content: "";
+					display: block;
+					height: 50px;
+					width: 50px;
+					background-repeat: no-repeat;
+					background-size: 100% 100%;
+					border: 1px solid rgba(255, 255, 255, 0.5);
+					box-shadow: 0 0 3px #FFF;
+					border-radius: 50px;
+				}
+
+				.header-background nav ol {
+					float: none;
+					position: initial;
+				}
+
+					nav ol li {
+						display: block;
+						float: none;
+						text-align: center;
+						position: initial;
+						margin: 0;
+						padding: 15px;
+						font-weight: 600;
+						border-top: 0.5px solid rgba(255, 255, 255, 0.5);
+					}
+
+					nav ol li:nth-of-type(4){
+						margin: 0;
+					}
+
+			header .header-background img {
+				display: none;
+			}
+
+	.header-waves {
+		display: none;
+	}
+}
