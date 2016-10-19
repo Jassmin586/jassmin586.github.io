@@ -274,35 +274,42 @@ MOBILE
 ------------------------------------------------------------	*/
 
 @media all and (max-width: 768px){
-		header .header-background {
+	header {
+		height: 0;
+	}
+
+		header::after {
+			background-image: url("graphics/menu.svg");
+			position: absolute;
+			right: 10px;
+			top: 3px;
+			content: "";
+			z-index: 1;
+			display: block;
 			height: 50px;
 			width: 50px;
-			display: block;
-			float: right;
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			border: 1px solid rgba(255, 255, 255, 0.5);
+			box-shadow: 0 0 3px #FFF;
+			border-radius: 50px;
+			background-color: #FFF;
+		}
+
+			header:hover::after {
+				cursor: pointer;
+			}
+
+		header .header-background {
+			min-height: 342px;
+			display: none;
 		}
 
 			.header-background nav {
-				display: none;
+				display: block;
 				width: 100vw;
-				min-height: 342px;
+				height: 100%;
 			}
-
-				.header-background nav::after {
-					background-image: url("graphics/menu.svg");
-					position: absolute;
-					right: 10px;
-					top: 3px;
-					z-index: 1;
-					content: "";
-					display: block;
-					height: 50px;
-					width: 50px;
-					background-repeat: no-repeat;
-					background-size: 100% 100%;
-					border: 1px solid rgba(255, 255, 255, 0.5);
-					box-shadow: 0 0 3px #FFF;
-					border-radius: 50px;
-				}
 
 				.header-background nav ol {
 					float: none;
@@ -331,4 +338,67 @@ MOBILE
 	.header-waves {
 		display: none;
 	}
+
+	main {
+		top: 0;
+	}
+
+		main p{
+			font-size: 20px;
+		}
+			main .banner .banner-quotation {
+				left: 5%;
+				width: 90%;
+			}
+
+				.banner .banner-quotation p {
+					font-size: 36px;
+				}
+
+			main section.intro p.intro-text {
+				font-size: 24px;
+			}
+
+			main article h1{
+				font-size: 24px;
+			}
+
+			main article p {
+				width: 92%;
+				left: 4%;
+				right: 4%;
+			}
+
+				.share a img {
+					width: 70%;
+				}
+
+			figure .border-image img {
+				width: 90%;
+			}
+
+				article .border-video video {
+					width: 90%;
+				}
+}
+/*------------------------------------------------------------
+769px - 1060px
+------------------------------------------------------------	*/
+@media all and (min-width: 769px) and (max-width: 1060px) {
+		nav ol li {
+			margin: 50px 23px;
+		}
+
+			.banner .banner-quotation p {
+				font-size: 38px;
+			}
+
+		main article p {
+			width: 30%;
+			left: 35%;
+		}
+
+		figure .border-image img {
+			width: 50%;
+		}
 }
