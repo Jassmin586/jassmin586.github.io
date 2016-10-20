@@ -215,11 +215,30 @@ main{
 
 	 		main .share a{
 	 			display: inline-block;
+				background: url("graphics/sprites-share.png");
+				text-indent: -200px;
+				overflow: hidden;
+				background-repeat: no-repeat;
+				background-size: 60%;
 	 		}
 
-	 			.share a img{
-	 				width: 50%;
-	 			}
+				main .share a.share-point {
+					background-position: 0 0;
+					width: 37px;
+					height: 18px;
+				}
+
+				main .share a.comment {
+					background-position: 0 -24px;
+					width: 37px;
+					height: 14.4px;
+				}
+
+				main .share a.favourite {
+					background-position: 0 -38.2px;
+					width: 34px;
+					height: 18px;
+				}
 
 	 	main hr{
 	 		width: 6%;
@@ -242,8 +261,8 @@ main{
 		display: inline-block;
 		text-align: center;
 		width: 100%;
-		position: relative;
-		top: 100px;
+		padding-top: 100px;
+		background-color: #FFF;
 	}
 
 		footer .share-icons{
@@ -256,11 +275,37 @@ main{
 			footer .share-icons a{
 				display: inline-block;
 				margin-right: 5px;
+				background: url("graphics/sprites.png");
+				text-indent: -200px;
+				overflow: hidden;
+				width: 63px;
+				height: 63px;
 			}
 
 			footer .share-icons a:last-of-type{
 				margin-right: 0;
 			}
+
+				footer .share-icons a.facebook-btn {
+					background-position: 0 0;
+				}
+
+				footer .share-icons a.twitter-btn {
+					background-position: -65px 0;
+				}
+
+				footer .share-icons a.vimeo-btn {
+					background-position: -130px 0;
+					width: 64px;
+				}
+
+				footer .share-icons a.dribbble-btn {
+					background-position: -196px 0;
+				}
+
+				footer .share-icons a.flickr-btn {
+					background-position: -261px 0;
+				}
 
 		footer .copyright-text{
 			padding: 80px 0;
@@ -370,10 +415,6 @@ MOBILE
 				left: 4%;
 				right: 4%;
 			}
-
-				.share a img {
-					width: 70%;
-				}
 
 			figure .border-image img {
 				width: 90%;
