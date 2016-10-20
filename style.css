@@ -99,30 +99,48 @@ body {
     }
 
     /*Projekty*/
-    main section.about {
-      background-color: rgba(83, 112, 130, 0.8);
-    }
-
-      main section.about p {
-        font-size: 1.1em;
-        font-family: 'Alegreya Sans', sans-serif;
-        padding-left: 10px;
-        padding-right: 4px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        margin: 10px 0 10px 30px;
-        background-color: #FFF;
+      main section.about .hello-img {
+        max-height: 50vh;
+        background-color: none;
+        padding: 0;
       }
 
-        main section.about p:nth-of-type(4) {
-          color: #FFF;
-          background-color: transparent;
-          text-shadow: none;
-          font-size: 1.5em;
-          font-weight: 600;
-          text-align: center;
-          margin: 30px 0;
+        section.about .hello-img img {
+          width: 100%;
+          position: relative;
+          box-sizing: border-box;
+          z-index: -1;
         }
+
+      main section.about h1 {
+        margin-bottom: 0;
+      }
+
+      main section.about .hello-paragraphs {
+        background-color: rgba(83, 112, 130, 1);
+        padding: 20px 0;
+      }
+
+        main section.about p {
+          font-size: 1.1em;
+          font-family: 'Alegreya Sans', sans-serif;
+          padding-left: 10px;
+          padding-right: 4px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          margin: 10px 0 10px 30px;
+          background-color: #FFF;
+        }
+
+          main section.about p:nth-of-type(4) {
+            color: #FFF;
+            background-color: transparent;
+            text-shadow: none;
+            font-size: 1.5em;
+            font-weight: 600;
+            text-align: center;
+            margin: 30px 0;
+          }
 
     main section.projects {
       background-color: rgba(168, 172, 171, 0.8);
@@ -210,6 +228,16 @@ body {
     main section.contact {
       background-color: rgba(241, 148, 91, 0.8);
     }
+
+      main section.contact img {
+        width: 100%;
+        padding: 0;
+        max-height: 60vh;
+      }
+
+      main section.contact h1 {
+        margin-bottom: 0;
+      }
 
       main section.contact p {
         font-size: 2em;
