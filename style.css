@@ -99,17 +99,21 @@ body {
     }
 
     /*Projekty*/
+    main section.about {
+      background-color: rgba(83, 112, 130, 1);
+    }
+
       main section.about .hello-img {
-        max-height: 50vh;
-        background-color: none;
         padding: 0;
+        display: none;
+        height: 100%;
       }
 
         section.about .hello-img img {
           width: 100%;
-          position: relative;
+          height: 380px;
           box-sizing: border-box;
-          z-index: -1;
+          filter: blur(0.5px) brightness(80%);
         }
 
       main section.about h1 {
@@ -117,7 +121,7 @@ body {
       }
 
       main section.about .hello-paragraphs {
-        background-color: rgba(83, 112, 130, 1);
+        overflow: hidden;
         padding: 20px 0;
       }
 
@@ -288,3 +292,12 @@ body {
     footer p {
       margin: 2px;
     }
+
+/*--------------------------------------------------------------
+MOBILE
+--------------------------------------------------------------*/
+@media all and (min-height: 900px){
+  main section.about .hello-img {
+    display: block;
+  }
+}
