@@ -304,7 +304,7 @@ body {
           }
 
           section.contact .contact-col:last-of-type p:hover {
-            color:white;
+            color:#FFF;
           }
 
               .contact-col p a {
@@ -327,8 +327,50 @@ body {
 /*--------------------------------------------------------------
 MOBILE
 --------------------------------------------------------------*/
-@media all and (min-height: 900px){
+@media all and (min-width: 1920px and min-height: 900px){
   main section.about .hello-img {
     display: block;
   }
+}
+
+@media all and (max-width: 768px){
+  header,
+  footer {
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    left: 0;
+    z-index: 1;
+  }
+
+  header {
+    max-height: initial;
+    height: 80vh;
+    top: 0;
+    border-radius: 0px;
+  }
+
+    header p,
+    header img {
+      display: none;
+    }
+
+          ul li a {
+            color: #FFF;
+            font-size: 2.5em;
+          }
+
+  main {
+    width: 100%;
+  }
+
+  footer {
+    height: 20vh;
+    bottom: 0;
+  }
+
+    footer p {
+      font-size: 1.5em;
+      color: #FFF;
+    }
 }
