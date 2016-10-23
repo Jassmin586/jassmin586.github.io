@@ -211,22 +211,43 @@ body {
           margin-left: 10px;
         }
 
-          section.projects .information p {
-            display: block;
-          }
-
-          section.projects .information .show-site {
+          section.projects .information a {
             border: 3px solid rgba(0, 0, 0, 0.7);
             border-radius: 8px;
             display: inline-block;
             padding: 10px;
-            margin-top: 20px;
             background-color: #FFF;
             font-size: 1.5em;
             color: #000;
             text-decoration: none;
             font-family: 'Alegreya Sans', sans-serif;
+            width: 76px;
+            text-align: center;
           }
+
+            section.projects .information a:hover span {
+              transform: rotateY(360deg);
+              transition-duration: 0.5s;
+              display: block;
+            }
+
+          section.projects .information p {
+            display: block;
+            font-size: 1.2em;
+          }
+
+            section.projects .information .show-code {
+              margin-left: -4px;
+              border-left: none;
+              border-top-left-radius: 0px;
+              border-bottom-left-radius: 0px;
+            }
+
+              .psd .information .show-site {
+                border-right: 1px solid rgba(0, 0, 0, 0.7);
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+              }
 
     /*Kontakt*/
     main section.contact {
@@ -243,43 +264,51 @@ body {
         margin-bottom: 0;
       }
 
-      main section.contact p {
-        font-size: 2em;
+      main section.contact .contact-col {
+        display: inline-block;
       }
 
-        main section.contact p.e-mail::before {
-          font-family: FontAwesome;
-          content: "\f0e0";
-          margin-right: 5px;
+        section.contact .contact-col p {
+          font-size: 2em;
+          display: block;
         }
 
-        main section.contact p.github::before {
-          font-family: FontAwesome;
-          content: "\f09b";
-          margin-right: 10px;
-        }
-
-        main section.contact p.linkedin::before {
-          font-family: FontAwesome;
-          content: "\f08c";
-          margin-right: 10px;
-        }
-
-        main section.contact p.city::before {
-          font-family: FontAwesome;
-          content: "\f015";
-          margin-right: 7px;
-        }
-
-          section.contact p a {
-            text-decoration: none;
-            color: inherit;
+          section.contact .contact-col p.e-mail::before {
+            font-family: FontAwesome;
+            content: "\f0e0";
+            margin-right: 5px;
           }
 
-            section.contact p a:hover {
-              font-weight: 600;
-              border: 1px solid #FFF;
-            }
+          section.contact .contact-col p.github a::before {
+            font-family: FontAwesome;
+            content: "\f09b";
+            margin-right: 10px;
+          }
+
+          section.contact .contact-col p.linkedin a::before {
+            font-family: FontAwesome;
+            content: "\f08c";
+            margin-right: 10px;
+          }
+
+          section.contact .contact-col p.city::before {
+            font-family: FontAwesome;
+            content: "\f015";
+            margin-right: 7px;
+          }
+
+          section.contact .contact-col:last-of-type p:hover {
+            border: 3px solid rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            padding: 10px;
+            margin: 0;
+            background-color: #FFF;
+          }
+
+              .contact-col p a {
+              text-decoration: none;
+              color: inherit;
+              }
 
   footer {
     position: fixed;
