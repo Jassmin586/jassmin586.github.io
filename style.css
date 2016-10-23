@@ -297,12 +297,14 @@ body {
             margin-right: 7px;
           }
 
+          section.contact .contact-col p:hover {
+            transform: rotateX(360deg);
+            transition-duration: 1s;
+            animation-iteration-count: 1;
+          }
+
           section.contact .contact-col:last-of-type p:hover {
-            border: 3px solid rgba(0, 0, 0, 0.7);
-            border-radius: 8px;
-            padding: 10px;
-            margin: 0;
-            background-color: #FFF;
+            color:white;
           }
 
               .contact-col p a {
