@@ -28,6 +28,10 @@ body {
     top: 5%;
   }
 
+    header a.hamburger {
+      display: none;
+    }
+
     header img {
       width: 50%;
       border-radius: 50%;
@@ -334,43 +338,117 @@ MOBILE
 }
 
 @media all and (max-width: 768px){
-  header,
+  header {
+    z-index: 1;
+    background-color: transparent;
+    width: 0;
+  }
+
+  header nav,
   footer {
     width: 50%;
     background-color: rgba(0, 0, 0, 0.9);
     position: fixed;
     left: 0;
-    z-index: 1;
+    display: none;
   }
 
-  header {
-    max-height: initial;
-    height: 80vh;
-    top: 0;
-    border-radius: 0px;
-  }
+    header .hamburger {
+      background-image: url("Graphics/hamburger.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-color: rgba(0, 0, 0, 0.9);
+      width: 50px;
+      height: 50px;
+      position: fixed;
+      padding: 11px;
+      top: 3px;
+      right: 0;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      text-indent: 300px;
+    }
+
+      header .hamburger:hover {
+        cursor: pointer;
+      }
+
+    header nav {
+      max-height: initial;
+      height: 80vh;
+      top: 0;
+      border-radius: 0px;
+    }
 
     header p,
     header img {
       display: none;
     }
 
+      header nav ul {
+        display: block;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
           ul li a {
             color: #FFF;
             font-size: 2.5em;
+            padding: 30px 0;
           }
 
   main {
     width: 100%;
   }
 
+    main section.about,
+    main section.projects {
+      min-height: initial;
+    }
+
+    main section.projects .blog,
+    main section.projects .psd {
+      padding: 0;
+      margin-bottom: 50px;
+    }
+
+      main section.projects .interactive-image,
+      main section.projects .information {
+        width: 95%;
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+      }
+
+        section.projects .information a.show-site,
+        section.projects .information a.show-code {
+          width: 100%;
+          display: block;
+          margin: 0;
+          box-sizing: border-box;
+          border-radius: 0px;
+          border-bottom: 3px solid rgba(0, 0, 0, 0.7);
+          border-left: 3px solid rgba(0, 0, 0, 0.7);
+          border-right: 3px solid rgba(0, 0, 0, 0.7);
+        }
+
+        .psd .information a.show-code {
+          border-top: none;
+        }
+
+        section.contact .contact-col p.e-mail {
+          font-size: 1.6em;
+        }
+
   footer {
     height: 20vh;
-    bottom: 0;
   }
 
     footer p {
       font-size: 1.5em;
       color: #FFF;
+      position: absolute;
+      bottom: 0;
     }
 }

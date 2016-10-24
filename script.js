@@ -7,4 +7,14 @@ $(document).ready( function() {
         }, 400);
   });
 
+  $(".hamburger").click(function(){
+    var hide_nav = $("header nav, footer");
+    if (hide_nav.is(":hidden")){
+      hide_nav.show();
+    }
+    else {
+      hide_nav.hide();
+    }
+  });
+
 });
