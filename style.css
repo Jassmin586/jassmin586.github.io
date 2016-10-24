@@ -437,7 +437,7 @@ MOBILE
 /*--------------------------------------------------------------
 OTHERS
 --------------------------------------------------------------*/
-@media all and (min-width: 1920px and min-height: 900px){
+@media all and (min-width: 1920px) and (min-height: 900px){
   main section.about .hello-img {
     display: block;
   }
