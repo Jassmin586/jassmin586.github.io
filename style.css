@@ -331,12 +331,6 @@ body {
 /*--------------------------------------------------------------
 MOBILE
 --------------------------------------------------------------*/
-@media all and (min-width: 1920px and min-height: 900px){
-  main section.about .hello-img {
-    display: block;
-  }
-}
-
 @media all and (max-width: 768px){
   header {
     z-index: 1;
@@ -349,15 +343,27 @@ MOBILE
     width: 50%;
     background-color: rgba(0, 0, 0, 0.9);
     position: fixed;
-    left: 0;
     display: none;
+    left: 0;
+    animation: fadein 1s;
   }
 
-    header .hamburger {
+  @keyframes fadein {
+    from { left: -50%; }
+    to   { left: 0; }
+  }
+
+  @keyframes fadeout {
+    from { left: 0; }
+    to   { left: -50%; }
+  }
+
+    header a.hamburger {
       background-image: url("Graphics/hamburger.png");
       background-size: cover;
       background-repeat: no-repeat;
       background-color: rgba(0, 0, 0, 0.9);
+      display: block;
       width: 50px;
       height: 50px;
       position: fixed;
@@ -379,6 +385,7 @@ MOBILE
       top: 0;
       border-radius: 0px;
     }
+
 
     header p,
     header img {
@@ -406,6 +413,45 @@ MOBILE
     main section.projects {
       min-height: initial;
     }
+
+
+
+
+
+        section.contact .contact-col p.e-mail {
+          font-size: 1.6em;
+        }
+
+  footer {
+    height: 20vh;
+  }
+
+    footer p {
+      font-size: 1.5em;
+      color: #FFF;
+      position: absolute;
+      bottom: 0;
+    }
+}
+
+/*--------------------------------------------------------------
+OTHERS
+--------------------------------------------------------------*/
+@media all and (min-width: 1920px and min-height: 900px){
+  main section.about .hello-img {
+    display: block;
+  }
+}
+
+@media all and (min-height: 800px){
+  main section.about,
+  main section.projects,
+  main section.contact {
+    min-height: initial;
+  }
+}
+
+@media all and (max-width: 830px){
 
     main section.projects .blog,
     main section.projects .psd {
@@ -437,18 +483,4 @@ MOBILE
           border-top: none;
         }
 
-        section.contact .contact-col p.e-mail {
-          font-size: 1.6em;
-        }
-
-  footer {
-    height: 20vh;
-  }
-
-    footer p {
-      font-size: 1.5em;
-      color: #FFF;
-      position: absolute;
-      bottom: 0;
-    }
 }

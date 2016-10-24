@@ -10,10 +10,13 @@ $(document).ready( function() {
   $(".hamburger").click(function(){
     var hide_nav = $("header nav, footer");
     if (hide_nav.is(":hidden")){
+      hide_nav.css("animation", "fadein 1s");
       hide_nav.show();
     }
     else {
-      hide_nav.hide();
+
+      hide_nav.css("animation", "fadeout 1s");
+      hide_nav.fadeOut();
     }
   });
 
