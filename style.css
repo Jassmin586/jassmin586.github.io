@@ -1,9 +1,14 @@
 body {
    margin:0;
    padding:0;
+   background-image: -webkit-gradient(linear,
+   left top, left bottom,
+   from(rgba(0, 0, 0, 0.5)),
+   to(rgba(0, 0, 0, 0.3))), url("Graphics/sunset.jpg");
+   background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.5),
+   rgba(0, 0, 0, 0.3)), url("Graphics/sunset.jpg");
    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-   rgba(0, 0, 0, 0.3)),
-   url("Graphics/sunset.jpg");
+   rgba(0, 0, 0, 0.3)), url("Graphics/sunset.jpg");
    background-size: 100% 100%;
    background-repeat: no-repeat;
    background-attachment: fixed;
@@ -13,12 +18,15 @@ body {
   header,
   main {
     display: block;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
   }
 
   header {
     background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 3px;
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
     width: 30%;
     max-height: 85vh;
     left: 5%;
@@ -34,9 +42,11 @@ body {
 
     header img {
       width: 50%;
-      border-radius: 50%;
+      -webkit-border-radius: 50%;
+              border-radius: 50%;
       border: 2px solid rgba(232, 185, 141, 1);
-      box-shadow: 0px 0px 20px 3px #FFF;
+      -webkit-box-shadow: 0px 0px 20px 3px #FFF;
+              box-shadow: 0px 0px 20px 3px #FFF;
     }
 
     header p {
@@ -61,20 +71,25 @@ body {
           text-decoration: none;
           font-size: 1.8em;
           padding: 10px 0;
+          -webkit-transition:0.3s;
           transition: 0.3s;
         }
 
           ul li a:hover {
             background-color: #FFF;
-            transform: scale(1.2, 1.2);
-            border-radius: 3px;
+            -webkit-transform: scale(1.2, 1.2);
+                -ms-transform: scale(1.2, 1.2);
+                    transform: scale(1.2, 1.2);
+            -webkit-border-radius: 3px;
+                    border-radius: 3px;
           }
 
   main {
     float: right;
     width: 60%;
     background-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+    -webkit-box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
   }
 
     main section > :not(h1) {
@@ -116,8 +131,11 @@ body {
         section.about .hello-img img {
           width: 100%;
           height: 380px;
-          box-sizing: border-box;
-          filter: blur(0.5px) brightness(80%);
+          -webkit-box-sizing: border-box;
+             -moz-box-sizing: border-box;
+                  box-sizing: border-box;
+          -webkit-filter: blur(0.5px) brightness(80%);
+                  filter: blur(0.5px) brightness(80%);
         }
 
       main section.about h1 {
@@ -169,7 +187,9 @@ body {
 
           section.projects .interactive-image img {
             width: 100%;
-            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+               -moz-box-sizing: border-box;
+                    box-sizing: border-box;
             border: 2px solid #FFF;
             display: inline-block;
             display: block;
@@ -189,6 +209,7 @@ body {
               right: 0;
               bottom: 0;
               opacity: 0;
+              -webkit-transition:visibility .7s, opacity .7s ease;
               transition: visibility .7s, opacity .7s ease;
             }
 
@@ -217,7 +238,8 @@ body {
 
           section.projects .information a {
             border: 3px solid rgba(0, 0, 0, 0.7);
-            border-radius: 8px;
+            -webkit-border-radius: 8px;
+                    border-radius: 8px;
             display: inline-block;
             padding: 10px;
             background-color: #FFF;
@@ -230,8 +252,10 @@ body {
           }
 
             section.projects .information a:hover span {
-              transform: rotateY(360deg);
-              transition-duration: 0.5s;
+              -webkit-transform: rotateY(360deg);
+                      transform: rotateY(360deg);
+              -webkit-transition-duration: 0.5s;
+                      transition-duration: 0.5s;
               display: block;
             }
 
@@ -243,14 +267,18 @@ body {
             section.projects .information .show-code {
               margin-left: -4px;
               border-left: none;
-              border-top-left-radius: 0px;
-              border-bottom-left-radius: 0px;
+              -webkit-border-top-left-radius: 0px;
+                      border-top-left-radius: 0px;
+              -webkit-border-bottom-left-radius: 0px;
+                      border-bottom-left-radius: 0px;
             }
 
               .psd .information .show-site {
                 border-right: 1px solid rgba(0, 0, 0, 0.7);
-                border-top-right-radius: 0px;
-                border-bottom-right-radius: 0px;
+                -webkit-border-top-right-radius: 0px;
+                        border-top-right-radius: 0px;
+                -webkit-border-bottom-right-radius: 0px;
+                        border-bottom-right-radius: 0px;
               }
 
     /*Kontakt*/
@@ -302,9 +330,12 @@ body {
           }
 
           section.contact .contact-col p:hover {
-            transform: rotateX(360deg);
-            transition-duration: 1s;
-            animation-iteration-count: 1;
+            -webkit-transform: rotateX(360deg);
+                    transform: rotateX(360deg);
+            -webkit-transition-duration: 1s;
+                    transition-duration: 1s;
+            -webkit-animation-iteration-count: 1;
+                    animation-iteration-count: 1;
           }
 
           section.contact .contact-col:last-of-type p:hover {
@@ -345,12 +376,23 @@ MOBILE
     position: fixed;
     display: none;
     left: 0;
-    animation: fadein 1s;
+    -webkit-animation: fadein 1s;
+            animation: fadein 1s;
+  }
+
+  @-webkit-keyframes fadein {
+    from { left: -50%; }
+    to   { left: 0; }
   }
 
   @keyframes fadein {
     from { left: -50%; }
     to   { left: 0; }
+  }
+
+  @-webkit-keyframes fadeout {
+    from { left: 0; }
+    to   { left: -50%; }
   }
 
   @keyframes fadeout {
@@ -370,8 +412,10 @@ MOBILE
       padding: 11px;
       top: 3px;
       right: 0;
-      border-top-left-radius: 5px;
-      border-bottom-left-radius: 5px;
+      -webkit-border-top-left-radius: 5px;
+              border-top-left-radius: 5px;
+      -webkit-border-bottom-left-radius: 5px;
+              border-bottom-left-radius: 5px;
       text-indent: 300px;
     }
 
@@ -383,7 +427,8 @@ MOBILE
       max-height: initial;
       height: 80vh;
       top: 0;
-      border-radius: 0px;
+      -webkit-border-radius: 0px;
+              border-radius: 0px;
     }
 
 
@@ -396,7 +441,9 @@ MOBILE
         display: block;
         position: relative;
         top: 50%;
-        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
       }
 
           ul li a {
@@ -414,11 +461,7 @@ MOBILE
       min-height: initial;
     }
 
-
-
-
-
-        section.contact .contact-col p.e-mail {
+      section.contact .contact-col p.e-mail {
           font-size: 1.6em;
         }
 
@@ -472,8 +515,11 @@ OTHERS
           width: 100%;
           display: block;
           margin: 0;
-          box-sizing: border-box;
-          border-radius: 0px;
+          -webkit-box-sizing: border-box;
+             -moz-box-sizing: border-box;
+                  box-sizing: border-box;
+          -webkit-border-radius: 0px;
+                  border-radius: 0px;
           border-bottom: 3px solid rgba(0, 0, 0, 0.7);
           border-left: 3px solid rgba(0, 0, 0, 0.7);
           border-right: 3px solid rgba(0, 0, 0, 0.7);
