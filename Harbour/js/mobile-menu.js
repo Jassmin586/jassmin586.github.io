@@ -1,11 +1,11 @@
 ( $(document).ready(function() {
-      $("header").click(function() {
-        var btn = $("header .header-background");
-        if (btn.is(":hidden")){
-          btn.show();
+      $(".mobile-btn").click(function() {
+        var mobile_nav = $("header nav");
+        if (mobile_nav.is(":hidden")){
+          mobile_nav.show();
         }
         else {
-          btn.hide();
+          mobile_nav.hide();
         }
       });
     })
