@@ -61,8 +61,11 @@ header {
 				nav ol li:nth-of-type(4){
 					margin-left: 170px;
 				}
-
-				nav ol li:hover{
+				nav ol li a{
+					color: #FFF;
+					text-decoration: none;
+				}
+				nav ol li a:hover{
 					cursor: pointer;
 					text-decoration: underline;
 				}
