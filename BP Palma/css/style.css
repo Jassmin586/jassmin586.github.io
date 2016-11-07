@@ -139,13 +139,14 @@ body {
 
         .catalog .gallery .trip {
           float: left;
-          width: 33.33%;
+          width: 33.33333%;
           margin: 0;
           position: relative;
           overflow: hidden;
+          color: transparent;
         }
 
-        .catalog .gallery img {
+        .gallery .trip img {
           width: 100%;
           height: 100%;
           transform: scale(1);
@@ -153,18 +154,27 @@ body {
           transition: transform .5s linear;
         }
 
-          .catalog .gallery img:hover {
+          .gallery .trip:hover img {
             transform: scale(1.1);
+            opacity: 0.5;
           }
 
-          .gallery figcaption {
+          .gallery .trip figcaption {
             position: absolute;
             bottom: 15%;
             left: 50%;
             transform: translateX(-50%);
             width: 100%;
+            font-size: 1.5em;
+            z-index: 999;
+            cursor: default;
+            user-select: none;
+            -moz-user-select: none;
           }
 
+        .gallery .trip:hover figcaption{
+          color: #FFF;
+        }
       main .catalog::after {
         clear: both;
         content: "";
