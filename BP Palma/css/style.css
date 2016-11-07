@@ -131,7 +131,42 @@ body {
         padding: 0 40px;
       }
 
-      main .catalog figure {
+      main .catalog .gallery {
         width: 100%;
         min-height: 400px;
+        margin: 40px 0 0 0;
+      }
+
+        .catalog .gallery .trip {
+          float: left;
+          width: 33.33%;
+          margin: 0;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .catalog .gallery img {
+          width: 100%;
+          height: 100%;
+          transform: scale(1);
+          display: block;
+          transition: transform .5s linear;
+        }
+
+          .catalog .gallery img:hover {
+            transform: scale(1.1);
+          }
+
+          .gallery figcaption {
+            position: absolute;
+            bottom: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+          }
+
+      main .catalog::after {
+        clear: both;
+        content: "";
+        display: block;
       }
