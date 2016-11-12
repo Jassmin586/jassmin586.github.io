@@ -40,7 +40,7 @@ body {
           }
 
           ul li a {
-            padding: 25px;
+            padding: 15px 25px;
             text-transform: uppercase;
             color: #FFF;
             text-decoration: none;
@@ -93,6 +93,15 @@ body {
       padding-bottom: 50px;
     }
 
+    main .about::after,
+    main .catalog::after,
+    main .agency::after,
+    footer {
+      clear: both;
+      content: "";
+      display: block;
+    }
+
     main .about {
       width: 100%;
       min-height: 300px;
@@ -118,12 +127,6 @@ body {
           font-size: 4em;
           line-height: 100px;
         }
-
-      main .about::after {
-        clear: both;
-        content: "";
-        display: block;
-      }
 
     main .catalog {
       width: 100%;
@@ -170,7 +173,8 @@ body {
             transition: transform .5s linear;
           }
 
-            .trip:hover a img {
+            .trip:hover a img,
+            .gallery .trip a:focus {
               transform: scale(1.1);
               opacity: 0.5;
             }
@@ -186,16 +190,11 @@ body {
               -moz-user-select: none;
             }
 
-            .trip:hover a figcaption{
+            .trip:hover a figcaption,
+            .trip a:focus figcaption{
               color: #FFF;
               background-color: rgba(0, 0, 0, 0.5);
             }
-
-      main .catalog::after {
-        clear: both;
-        content: "";
-        display: block;
-      }
 
     main .agency {
       background-color: #FFF;
@@ -217,12 +216,6 @@ body {
         .agency .location img {
           width: 250px;
           height: 250px;
-        }
-
-        main .agency::after {
-          clear: both;
-          content: "";
-          display: block;
         }
 
     main .job {
@@ -251,3 +244,130 @@ body {
         width: 60%;
         margin: 0 auto;
       }
+
+      main .job h3 {
+        padding-top: 60px;
+        padding-bottom: 20px;
+      }
+
+      main .job table {
+        width: 100%;
+        border-spacing: 0px;
+        background-color: rgba(255, 255, 255, 0.7);
+      }
+
+        .job table td {
+          padding: 0;
+          border-top: 1px solid rgba(0, 0, 0, 0.2);
+          border-left: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        .job table tr:first-of-type td {
+          border-top: none;
+        }
+
+        .job td a {
+          padding: 20px 0;
+          display: block;
+          width: 100%;
+          transition: background .4s;
+          text-decoration: none;
+          font-size: 1.1em;
+          text-transform: uppercase;
+          color: #000;
+        }
+
+          .job td a:hover {
+            color: #FFF;
+            background-color: rgba(0, 0, 0, 0.7);
+          }
+
+  footer {
+    width: 100%;
+    min-height: 100px;
+    display: block;
+    background-color: #292A2A;
+    color: #FFF;
+    overflow: auto;
+  }
+
+    footer .footer-part {
+      float: left;
+      width: 33.33333%;
+      box-sizing: border-box;
+      padding: 20px 50px;
+    }
+
+      footer .footer-part .type-of-contact {
+        display: block;
+      }
+
+        footer .footer-part .type-of-contact h3 {
+          display: inline-block;
+          vertical-align: top;
+          width: 80px;
+        }
+
+        footer .footer-part .type-of-contact p {
+          display: inline-block;
+          margin-left: 10px;
+        }
+
+      footer .footer-part .social-icons {
+        width: 100%;
+      }
+
+        .footer-part .social-icons a {
+          text-indent: 80px;
+          width: 50px;
+          height: 50px;
+          overflow: hidden;
+          font-size: 40px;
+          margin: 10px;
+          padding: 10px;
+          border-radius: 12px;
+          background-color: #FFF;
+          box-sizing: border-box;
+          transition: .3s;
+        }
+
+        .footer-part .social-icons a::before {
+          float: left;
+          text-indent: 0px;
+        }
+
+        .footer-part .social-icons a.fa-youtube-square {
+          color: #cc181e;
+        }
+
+        .footer-part .social-icons a.fa-youtube-square:hover {
+          color: #FFF;
+          background-color: #cc181e;
+        }
+
+        .footer-part .social-icons a.fa-facebook-square {
+          color: #3b5998;
+        }
+
+          .footer-part .social-icons a.fa-facebook-square:hover {
+            color: #FFF;
+            background-color: #3b5998;
+          }
+
+        .footer-part .social-icons a.fa-instagram {
+          color: #ffc838;
+        }
+
+          .footer-part .social-icons a.fa-instagram:hover {
+            color: #FFF;
+            background-color: #ffc838;
+          }
+
+        .footer-part .social-icons a.fa-google-plus-square {
+          color: #d34836;
+        }
+
+          .footer-part .social-icons a.fa-google-plus-square:hover {
+            color: #FFF;
+            background-color: #d34836;
+          }
