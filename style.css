@@ -173,7 +173,8 @@ body {
     }
 
       main section.projects .blog,
-      main section.projects .psd {
+      main section.projects .psd,
+      main section.projects .one-page {
         display: block;
         width: 100%;
         margin-bottom: 30px;
@@ -229,6 +230,10 @@ body {
                   background-image: url("Graphics/pbd-tech.png");
                 }
 
+                .one-page .interactive-image .mask::after {
+                  background-image: url("Graphics/bp-tech.png");
+                }
+
         main section.projects .information {
           vertical-align: top;
           display: inline-block;
@@ -273,7 +278,8 @@ body {
                       border-bottom-left-radius: 0px;
             }
 
-              .psd .information .show-site {
+              .psd .information .show-site,
+              .one-page .information .show-site {
                 border-right: 1px solid rgba(0, 0, 0, 0.7);
                 -webkit-border-top-right-radius: 0px;
                         border-top-right-radius: 0px;
@@ -497,7 +503,8 @@ OTHERS
 @media all and (max-width: 830px){
 
     main section.projects .blog,
-    main section.projects .psd {
+    main section.projects .psd,
+    main section.projects .one-page {
       padding: 0;
       margin-bottom: 50px;
     }
