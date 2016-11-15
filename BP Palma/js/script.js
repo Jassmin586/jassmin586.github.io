@@ -38,12 +38,14 @@ $(document).ready( function(){
     }, 400);
   });
 
+  $(window).scroll(function(){
 
-    if($(document).scrollTop() > $("main .catalog").offset().top)
+    if(($(document).scrollTop() >= $("main .about").offset().top) && ($(document).scrollTop() < $("footer").offset().top) && ($(window).width()<=768))
     {
-      $("footer a.up").show();
+      $("footer a.up").addClass("active");
     }
     else {
-      $("footer a.up").hide();
+      $("footer a.up").removeClass("active");
     }
+  });
 });
