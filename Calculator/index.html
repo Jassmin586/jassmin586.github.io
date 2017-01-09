@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" >
+    <title>Kalkulator</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: #4f4c4c;
+      }
+
+        form.kalkulator {
+          width: 500px;
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border: 20px solid rgba(0, 0, 0, 0.5);
+          border-radius: 5%;
+        }
+
+          form.kalkulator input[type="text"] {
+            font-size: 5em;
+            text-align: right;
+            box-sizing: border-box;
+            width: 100%;
+          }
+
+          form.kalkulator .szereg {
+            display: block;
+            margin: 0 auto;
+          }
+
+            form.kalkulator .szereg input[type="button"] {
+              font-size: 3em;
+              display: block;
+              float: left;
+              width: 100px;
+            }
+
+            form.kalkulator .szereg input[value="="] {
+              width: 200px;
+            }
+
+    </style>
+  </head>
+  <body>
+    <form class="kalkulator" method="get">
+
+      <div class="szereg">
+        <input type="text" class="wynik" name="wynik" value="" disabled/>
+      </div>
+
+      <div class="szereg">
+        <input type="button" class="cyfra" name="jeden" value="1" />
+        <input type="button" class="cyfra" name="dwa" value="2" />
+        <input type="button" class="cyfra" name="trzy" value="3" />
+        <input type="button" class="cofniecie" name="cofniecie" value="&#8592;" />
+        <input type="button" class="skasowanie" name="skasowanie" value="C" />
+      </div>
+
+      <div class="szereg">
+        <input type="button" class="cyfra" name="cztery" value="4" />
+        <input type="button" class="cyfra" name="piec" value="5" />
+        <input type="button" class="cyfra" name="szesc" value="6" />
+        <input type="button" class="dzielenie" name="dzielenie" value="&#247;" />
+        <input type="button" class="odejmowanie" name="mnozenie" value="&#8722;" />
+      </div>
+
+      <div class="szereg">
+        <input type="button" class="cyfra" name="siedem" value="7" />
+        <input type="button" class="cyfra" name="osiem" value="8" />
+        <input type="button" class="cyfra" name="dziewiec" value="9" />
+        <input type="button" class="mnozenie" name="odejmowanie" value="&#215;" />
+        <input type="button" class="dodawanie" name="dodawanie" value="+" />
+      </div>
+
+      <div class="szereg">
+        <input type="button" class="przecinek" name="przecinek" value="." />
+        <input type="button" class="cyfra" name="zero" value="0" />
+        <input type="button" class="procent" name="procent" value="%" />
+        <input type="button" class="rownosc" name="rownosc" value="=" />
+      </div>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+			  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+			  crossorigin="anonymous">
+    </script>
+    <script src="script.js" type="text/javascript"></script>
+  </body>
+</html>
