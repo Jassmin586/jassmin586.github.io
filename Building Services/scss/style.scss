@@ -1,17 +1,8 @@
+@import "keyframes-mixins";
+
 $menu-size: 775px;
 $tile-size: 250px;
 $tile-border: 25px;
-
-@mixin display($height,$display) {
-  height: $height;
-  display: $display;
-}
-
-@mixin tile($height,$width,$border-radius){
-  height: $height;
-  width: $width;
-  border-radius: $border-radius;
-}
 
 * {
   margin: 0;
@@ -26,7 +17,7 @@ $tile-border: 25px;
   header {
     position: relative;
 
-    img#dec {
+    img.dec {
       position: absolute;
       bottom: -90px;
       right: -198px;
@@ -82,17 +73,36 @@ $tile-border: 25px;
           }
 
           a {
-            @include display(100%,block);
+            @include display(100%,flex);
             border-radius: $tile-border;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            text-decoration: none;
+            font-family: 'Cabin', sans-serif;
+            font-size: 2em;
+            font-weight: 700;
+            color: #000;
+            text-transform: uppercase;
+            text-indent: -600px;
+            overflow: hidden;
+
+            &:nth-child(2){
+
+            }
 
             &:hover {
-              background-color: #000;
+              background-color: #90CEF2;
+              text-indent: 0;
+              transition: text-indent 1s;
+              animation: fade-in 1s;
             }
           }
 
-          img {
+          img.galleryPhoto {
             @include tile($tile-size,$tile-size, $tile-border);
             display: none;
+            animation: fade-in 1s;
 
             &:nth-child(1){
               display: flex;

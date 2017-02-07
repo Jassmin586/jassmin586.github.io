@@ -1,0 +1,19 @@
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@mixin display($height,$display) {
+  height: $height;
+  display: $display;
+}
+
+@mixin tile($height,$width,$border-radius){
+  height: $height;
+  width: $width;
+  border-radius: $border-radius;
+}

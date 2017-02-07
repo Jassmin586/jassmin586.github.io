@@ -1,3 +1,9 @@
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 * {
   margin: 0;
   padding: 0; }
@@ -9,7 +15,7 @@
   align-items: center; }
   #container header {
     position: relative; }
-    #container header img#dec {
+    #container header img.dec {
       position: absolute;
       bottom: -90px;
       right: -198px; }
@@ -50,14 +56,29 @@ nav {
       background-image: url("graphics/logo.png"); }
     nav li a {
       height: 100%;
-      display: block;
-      border-radius: 25px; }
+      display: flex;
+      border-radius: 25px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      text-decoration: none;
+      font-family: 'Cabin', sans-serif;
+      font-size: 2em;
+      font-weight: 700;
+      color: #000;
+      text-transform: uppercase;
+      text-indent: -600px;
+      overflow: hidden; }
       nav li a:hover {
-        background-color: #000; }
-    nav li img {
+        background-color: #90CEF2;
+        text-indent: 0;
+        transition: text-indent 1s;
+        animation: fade-in 1s; }
+    nav li img.galleryPhoto {
       height: 250px;
       width: 250px;
       border-radius: 25px;
-      display: none; }
-      nav li img:nth-child(1) {
+      display: none;
+      animation: fade-in 1s; }
+      nav li img.galleryPhoto:nth-child(1) {
         display: flex; }
