@@ -16,9 +16,14 @@
   #container header {
     position: relative; }
     #container header img.dec {
-      position: absolute;
+      position: absolute; }
+    #container header img.builder {
       bottom: -90px;
       right: -198px; }
+    #container header img.arrow {
+      top: 125px;
+      left: -160px;
+      width: 20%; }
 
 nav {
   width: 775px;
@@ -67,13 +72,16 @@ nav {
       font-weight: 700;
       color: #000;
       text-transform: uppercase;
-      text-indent: -600px;
       overflow: hidden; }
       nav li a:hover {
         background-color: #90CEF2;
-        text-indent: 0;
-        transition: text-indent 1s;
         animation: fade-in 1s; }
+      nav li a:hover span {
+        margin-left: 0px;
+        transition: margin-left 1s; }
+    nav li span {
+      margin-left: -600px;
+      width: 250px; }
     nav li img.galleryPhoto {
       height: 250px;
       width: 250px;
@@ -82,3 +90,19 @@ nav {
       animation: fade-in 1s; }
       nav li img.galleryPhoto:nth-child(1) {
         display: flex; }
+
+main {
+  height: 100%;
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  align-items: center;
+  justify-content: center; }
+  main section {
+    height: 90%;
+    display: flex;
+    width: 80%;
+    background-color: #FFEDB3;
+    border-radius: 25px; }
