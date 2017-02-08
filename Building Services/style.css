@@ -38,7 +38,7 @@ nav {
     width: 250px;
     border-radius: 25px;
     list-style: none; }
-    nav li:not(#gallery):not(#logo) {
+    nav li:not(#photos-group):not(#logo) {
       background-image: url("graphics/menu.jpg");
       background-repeat: no-repeat; }
     nav li:first-child {
@@ -102,7 +102,7 @@ main {
   justify-content: center; }
   main section {
     height: 90%;
-    display: flex;
+    display: none;
     width: 80%;
     background-color: #FFEDB3;
     border-radius: 25px; }

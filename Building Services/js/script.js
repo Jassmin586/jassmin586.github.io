@@ -16,3 +16,20 @@ var Slider = {
 setInterval(function(){
   Slider.changeSlide()
 }, 4000);
+
+var Section = {
+  showSection: function(e) {
+    var name = e.target.getAttribute("href");
+    var main = document.getElementsByTagName("main")[0];
+    main.style.display = "flex";
+    document.querySelector(name).style.display = "flex";
+  },
+  events: function(){
+    var handler = document.getElementsByClassName("menu-link");
+    for(i=0, x=handler.length;i<x;i++){
+      handler[i].addEventListener("click", Section.showSection);
+    }
+  }
+};
+
+Section.events();

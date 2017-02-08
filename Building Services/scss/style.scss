@@ -48,7 +48,7 @@ nav {
     @include tile($tile-size,$tile-size, $tile-border);
     list-style: none;
 
-    &:not(#gallery):not(#logo) {
+    &:not(#photos-group):not(#logo) {
       background-image: url("graphics/menu.jpg");
       background-repeat: no-repeat;
     }
@@ -134,7 +134,7 @@ main {
   justify-content: center;
 
   section {
-    @include display(90%,flex);
+    @include display(90%,none);
     width: 80%;
     background-color: #FFEDB3;
     border-radius: $tile-border;
