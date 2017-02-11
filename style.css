@@ -123,21 +123,14 @@ body {
       background-color: rgba(83, 112, 130, 1);
     }
 
-      main section.about .hello-img {
+      main section.about .about-bg {
         padding: 0;
-        display: none;
+        display: block;
         height: 100%;
+        background-image: url("Graphics/code.jpg");
+        background-attachment: fixed;
+        background-size: cover;
       }
-
-        section.about .hello-img img {
-          width: 100%;
-          height: 380px;
-          -webkit-box-sizing: border-box;
-             -moz-box-sizing: border-box;
-                  box-sizing: border-box;
-          -webkit-filter: blur(0.5px) brightness(80%);
-                  filter: blur(0.5px) brightness(80%);
-        }
 
       main section.about h1 {
         margin-bottom: 0;
@@ -151,11 +144,11 @@ body {
         main section.about p {
           font-size: 1.1em;
           font-family: 'Alegreya Sans', sans-serif;
-          padding-left: 10px;
-          padding-right: 4px;
-          padding-top: 10px;
-          padding-bottom: 10px;
-          margin: 10px 0 10px 30px;
+          padding-left: 15px;
+          padding-right: 6px;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          margin: 0 0 0 30px;
           background-color: #FFF;
         }
 
@@ -167,6 +160,7 @@ body {
             font-weight: 600;
             text-align: center;
             margin: 30px 0;
+            background-color: rgba(0,0,0,0.8);
           }
 
     main section.projects {
@@ -302,6 +296,7 @@ body {
         background-attachment: fixed;
         background-position: center;
         box-sizing: border-box;
+        padding: 0;
       }
 
         section.contact .contact-bg .contact-type {
@@ -350,16 +345,12 @@ body {
             }
 
               .contact-type p.linkedin a:hover,
-              .contact-type p.github a:hover
-               {
-                -webkit-transform: rotateX(360deg);
-                        transform: rotateX(360deg);
-                -webkit-transition-duration: 1s;
-                        transition-duration: 1s;
-                -webkit-animation-iteration-count: 1;
-                        animation-iteration-count: 1;
+              .contact-type p.github a:hover {
                 color:#FFF;
-                background-color: rgba(0, 0, 0, 0.7);
+                background-color: #000;
+                -webkit-transform: scale(1.2, 1.2);
+                -ms-transform: scale(1.2, 1.2);
+                transform: scale(1.2, 1.2);
               }
 
                 .contact-type p a {
@@ -369,6 +360,11 @@ body {
                   padding: 8px 0;
                 }
 
+                .contact-type p.linkedin a,
+                .contact-type p.github a {
+                  -webkit-transition: 0.3s;
+                  transition: 0.3s;
+                }
   footer {
     position: fixed;
     bottom: 0;
@@ -511,11 +507,6 @@ MOBILE
 /*--------------------------------------------------------------
 OTHERS
 --------------------------------------------------------------*/
-@media all and (min-width: 1920px) and (min-height: 900px){
-  main section.about .hello-img {
-    display: block;
-  }
-}
 
 @media all and (min-height: 800px){
   main section.about,
