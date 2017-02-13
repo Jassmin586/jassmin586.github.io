@@ -105,7 +105,6 @@ nav {
         margin-left: 0px;
         transition: margin-left 1s;
       }
-
     }
 
     span {
@@ -125,35 +124,72 @@ nav {
   }
 }
 
+.open{
+  visibility: visible;
+  opacity: 1;
+}
+
 main {
-  @include display(100%,none);
+  @include display(100%,flex);
   position: absolute;
   top: 0;
   right: 0;
   width: 100%;
-  align-items: center;
-  justify-content: center;
+  visibility: hidden;
 
   section {
-    @include display(90%,none);
+    @include display(90%,flex);
     width: 80%;
+    position: absolute;
+    top: 5%;
+    left: 10%;
     background-color: #FFEDB3;
     border-radius: $tile-border;
+    transition: visibility 0.5s, opacity 0.5s;
+    visibility: hidden;
+    opacity: 0;
     flex-direction: column;
-    animation: fade-in 1s;
 
-    &:fadeOut {
-      animation: fade-out 1s;
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      font-family: 'Cabin', sans-serif;
+    }
+
+    p {
+      font-family: 'PT Sans', sans-serif;
+      font-size: 1.5rem;
+      margin: 50px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid #FFF;
+    }
+
+    h2 {
+      @extend h1;
+      font-size: 2rem;
+    }
+
+    .company {
+      display: flex;
+
+
+      img {
+        flex: 1 0 auto;
+      }
+
+      p {
+        font-size: 1.1rem;
+      }
     }
   }
 
   button.close-btn {
     @include display($close-size,flex);
     width: $close-size;
-    align-self: flex-end;
     background-color: #FFF;
     border-radius: 50%;
     margin: 10px;
+    align-self: flex-end;
     justify-content: center;
     align-items: center;
     text-decoration: none;

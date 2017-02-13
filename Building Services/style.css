@@ -4,12 +4,6 @@
   100% {
     opacity: 1; } }
 
-@keyframes fade-out {
-  100% {
-    opacity: 0; }
-  0% {
-    opacity: 1; } }
-
 @keyframes rorate-btn {
   100% {
     transform: rorate(360deg);
@@ -102,33 +96,57 @@ nav {
       nav li img.galleryPhoto:nth-child(1) {
         display: flex; }
 
+.open {
+  visibility: visible;
+  opacity: 1; }
+
 main {
   height: 100%;
-  display: none;
+  display: flex;
   position: absolute;
   top: 0;
   right: 0;
   width: 100%;
-  align-items: center;
-  justify-content: center; }
+  visibility: hidden; }
   main section {
     height: 90%;
-    display: none;
+    display: flex;
     width: 80%;
+    position: absolute;
+    top: 5%;
+    left: 10%;
     background-color: #FFEDB3;
     border-radius: 25px;
-    flex-direction: column;
-    animation: fade-in 1s; }
-    main section:fadeOut {
-      animation: fade-out 1s; }
+    transition: visibility 0.5s, opacity 0.5s;
+    visibility: hidden;
+    opacity: 0;
+    flex-direction: column; }
+    main section h1, main section h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      font-family: 'Cabin', sans-serif; }
+    main section p {
+      font-family: 'PT Sans', sans-serif;
+      font-size: 1.5rem;
+      margin: 50px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid #FFF; }
+    main section h2 {
+      font-size: 2rem; }
+    main section .company {
+      display: flex; }
+      main section .company img {
+        flex: 1 0 auto; }
+      main section .company p {
+        font-size: 1.1rem; }
   main button.close-btn {
     height: 60px;
     display: flex;
     width: 60px;
-    align-self: flex-end;
     background-color: #FFF;
     border-radius: 50%;
     margin: 10px;
+    align-self: flex-end;
     justify-content: center;
     align-items: center;
     text-decoration: none;
