@@ -7,6 +7,19 @@
   }
 }
 
+@keyframes fade-out {
+  100% {
+    opacity: 0;
+  }
+  0% {
+    opacity: 1;
+  }
+}
+
+@keyframes rorate-btn {
+  100% {transform: rorate(360deg); -webkit-transform: rotate(360deg);}
+}
+
 @mixin display($height,$display) {
   height: $height;
   display: $display;
