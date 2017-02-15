@@ -3,7 +3,6 @@
 $menu-size: 775px;
 $tile-size: 250px;
 $tile-border: 25px;
-$close-size: 60px;
 
 * {
   margin: 0;
@@ -168,24 +167,23 @@ main {
       @extend h1;
       font-size: 2rem;
     }
+  }
+  .company {
+    display: flex;
 
-    .company {
-      display: flex;
 
+    img {
+      flex: 1 0 15%;
+    }
 
-      img {
-        flex: 1 0 auto;
-      }
-
-      p {
-        font-size: 1.1rem;
-      }
+    p {
+      font-size: 1.1rem;
+      flex: 2 0 40%;
     }
   }
 
   button.close-btn {
-    @include display($close-size,flex);
-    width: $close-size;
+    padding: 10px;
     background-color: #FFF;
     border-radius: 50%;
     margin: 10px;
@@ -196,9 +194,8 @@ main {
     color: #000;
     border: none;
 
-    &:hover{
+    &:hover {
       cursor: pointer;
-      animation: rorate-btn 0.5s linear;
     }
 
     span {
@@ -206,5 +203,28 @@ main {
       font-weight: 700;
       font-family: 'Syncopate', sans-serif;
     }
+  }
+}
+
+section.services {
+  align-items: center;
+
+  ul {
+    margin: 50px;
+    font-family: 'PT Sans', sans-serif;
+  }
+
+  li:first-child:before {
+    font-family: FontAwesome;
+    content: "\f1ad";
+  }
+
+  li:nth-child(2):before {
+    font-family: FontAwesome;
+    content: "\f015";
+  }
+
+  li {
+    list-style: none;
   }
 }

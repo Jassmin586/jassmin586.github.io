@@ -30,14 +30,14 @@ var Section = {
 
       e.preventDefault();
       main.className = "open";
-      section.className = "open";
+      section.classList.add("open");
   }
   },
   hideSection: function(e){
-    if (e.target === e.currentTarget || e.target.className === "close-btn") {
+    if (e.target === this || e.target.className === "close-btn") {
 
       Section.activeSection.classList.remove("open");
-      e.currentTarget.classList.remove("open");
+      this.classList.remove("open");
     }
   },
     events: function(){
