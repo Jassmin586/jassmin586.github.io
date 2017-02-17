@@ -160,9 +160,25 @@ section.services {
     font-family: 'PT Sans', sans-serif; }
   section.services li:first-child:before {
     font-family: FontAwesome;
-    content: "\f1ad"; }
+    content: "\f275"; }
   section.services li:nth-child(2):before {
     font-family: FontAwesome;
     content: "\f015"; }
+  section.services li:nth-child(3):before {
+    font-family: FontAwesome;
+    content: "\f0fe"; }
+  section.services li:nth-child(4):before {
+    font-family: FontAwesome;
+    content: "\f0ad"; }
+  section.services li:nth-child(5):before {
+    font-family: FontAwesome;
+    content: "\f2b5"; }
+  section.services li:last-child:before {
+    font-family: FontAwesome;
+    content: "\f1ad"; }
   section.services li {
     list-style: none; }
+    section.services li a {
+      text-decoration: none; }
+  section.services div {
+    display: none; }

@@ -216,7 +216,7 @@ section.services {
 
   li:first-child:before {
     font-family: FontAwesome;
-    content: "\f1ad";
+    content: "\f275";
   }
 
   li:nth-child(2):before {
@@ -224,7 +224,35 @@ section.services {
     content: "\f015";
   }
 
+  li:nth-child(3):before {
+    font-family: FontAwesome;
+    content: "\f0fe";
+  }
+
+  li:nth-child(4):before {
+    font-family: FontAwesome;
+    content: "\f0ad";
+  }
+
+  li:nth-child(5):before {
+    font-family: FontAwesome;
+    content: "\f2b5";
+  }
+
+  li:last-child:before {
+    font-family: FontAwesome;
+    content: "\f1ad";
+  }
+
   li {
     list-style: none;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  div {
+    display: none;
   }
 }
