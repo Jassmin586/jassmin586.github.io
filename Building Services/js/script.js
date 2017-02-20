@@ -47,3 +47,29 @@ var Section = {
   };
 
   Section.events();
+
+  var pCollapse = {
+    showParagraph: function(e) {
+      e.preventDefault();
+      if (e.target.hasAttribute("href") && e.target.parentNode.nodeName == "LI") {
+        var pName = e.target.getAttribute("href");
+        document.querySelector(pName).classList.toggle("p-open");
+      }
+    },
+    readMore: function(e) {
+      if (e.target.className === "read-more") {
+        var parentBtn = e.target.parentNode.className.split(' ')[1];
+        var p = document.querySelectorAll("." + parentBtn + " p:not(:first-of-type)");
+          for (var i = 0, x = p.length; i < x; i++) {
+            p[i].style.display = "block";
+          }
+        document.querySelector("." + parentBtn).removeChild(e.target);
+      }
+    },
+    events: function(){
+      document.querySelector("#services > ul").addEventListener("click", pCollapse.showParagraph);
+      document.querySelector(".all-posts").addEventListener("click", pCollapse.readMore);
+    }
+  };
+
+  pCollapse.events();

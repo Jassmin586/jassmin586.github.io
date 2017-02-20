@@ -115,17 +115,20 @@ main {
     transition: visibility 0.5s, opacity 0.5s;
     visibility: hidden;
     opacity: 0;
-    flex-direction: column; }
+    flex-direction: column;
+    overflow: hidden; }
     main section h1, main section h2 {
       font-size: 2.5rem;
       text-align: center;
       font-family: 'Cabin', sans-serif; }
     main section p {
       font-family: 'PT Sans', sans-serif;
-      font-size: 1.5rem;
+      font-size: 1.1rem;
       margin: 50px;
       padding-bottom: 30px;
       border-bottom: 1px solid #FFF; }
+      main section p.welcome {
+        font-size: 1.4rem; }
     main section h2 {
       font-size: 2rem; }
   main .company {
@@ -133,7 +136,6 @@ main {
     main .company img {
       flex: 1 0 15%; }
     main .company p {
-      font-size: 1.1rem;
       flex: 2 0 40%; }
   main button.close-btn {
     padding: 10px;
@@ -157,28 +159,122 @@ section.services {
   align-items: center; }
   section.services ul {
     margin: 50px;
-    font-family: 'PT Sans', sans-serif; }
-  section.services li:first-child:before {
+    font-family: 'PT Sans', sans-serif;
+    display: block;
+    width: 100%;
+    overflow-y: auto; }
+  section.services li:first-child a:before {
     font-family: FontAwesome;
     content: "\f275"; }
-  section.services li:nth-child(2):before {
+  section.services li:nth-child(2) a:before {
     font-family: FontAwesome;
     content: "\f015"; }
-  section.services li:nth-child(3):before {
+  section.services li:nth-child(3) a:before {
     font-family: FontAwesome;
     content: "\f0fe"; }
-  section.services li:nth-child(4):before {
+  section.services li:nth-child(4) a:before {
     font-family: FontAwesome;
     content: "\f0ad"; }
-  section.services li:nth-child(5):before {
+  section.services li:nth-child(5) a:before {
     font-family: FontAwesome;
     content: "\f2b5"; }
-  section.services li:last-child:before {
+  section.services li:last-child a:before {
     font-family: FontAwesome;
     content: "\f1ad"; }
   section.services li {
-    list-style: none; }
+    list-style: none;
+    border: 1px solid #FFF;
+    margin: 0 50px;
+    display: flex;
+    flex-direction: column; }
     section.services li a {
-      text-decoration: none; }
-  section.services div {
-    display: none; }
+      padding: 10px 20px;
+      background-color: #ffd585;
+      font-size: 1.5rem;
+      text-decoration: none;
+      color: #000;
+      display: block; }
+      section.services li a:before {
+        width: 35px;
+        display: inline-block; }
+      section.services li a:after {
+        font-family: FontAwesome;
+        content: "\f078";
+        display: block;
+        float: right; }
+    section.services li div {
+      display: none;
+      background-color: #fff3cd; }
+    section.services li .p-open {
+      display: flex;
+      align-items: center; }
+    section.services li img {
+      width: 30%;
+      margin-left: 50px; }
+    section.services li p {
+      border: 0;
+      padding: 0; }
+  section.services button.pdf-button {
+    padding: 10px 20px;
+    background-color: #ffd585;
+    font-size: 1.5rem;
+    border-radius: 7px;
+    margin-bottom: 50px; }
+    section.services button.pdf-button:hover {
+      cursor: pointer;
+      border: 3px dotted #FFF; }
+
+section.projects h1, main section.projects h2 {
+  margin-bottom: 30px; }
+
+section.projects .all-posts {
+  overflow-y: auto; }
+
+section.projects .post {
+  display: block;
+  margin: 0 50px 50px 50px; }
+  section.projects .post h2 {
+    text-align: left;
+    border-bottom: 2px solid #FFF;
+    margin: 0; }
+  section.projects .post time {
+    text-align: right;
+    display: block;
+    margin: 10px;
+    font-size: 1.1rem;
+    font-family: 'PT Sans', sans-serif; }
+  section.projects .post .picture {
+    margin-bottom: 50px;
+    display: block;
+    text-align: center; }
+  section.projects .post p {
+    margin: 0;
+    border: 0; }
+    section.projects .post p:not(:first-of-type) {
+      display: none; }
+
+section.projects button.read-more {
+  background-color: #ffd585;
+  border-radius: 7px;
+  padding: 5px 10px;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 1rem; }
+  section.projects button.read-more:hover {
+    cursor: pointer;
+    border: 3px dotted #FFF; }
+
+section.clients p {
+  font-size: 1.4rem; }
+
+section.clients .clients-logo {
+  margin: 0 50px 50px 50px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center; }
+  section.clients .clients-logo a {
+    width: 18%;
+    margin: 10px 0; }
+  section.clients .clients-logo img {
+    width: 100%; }

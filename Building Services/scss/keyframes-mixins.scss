@@ -17,3 +17,9 @@
   width: $width;
   border-radius: $border-radius;
 }
+
+@mixin services-heading(){
+  padding: 10px 20px;
+  background-color: lighten(#FEA906, 25%);
+  font-size: 1.5rem;
+}
