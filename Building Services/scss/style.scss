@@ -370,24 +370,42 @@ section.projects {
 }
 
 section.clients {
+  align-items: center;
+
   p {
     font-size: 1.4rem;
   }
 
   .clients-logo {
     margin: 0 50px 50px 50px;
-    overflow: hidden;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     justify-content: space-around;
     align-content: center;
+    width: 70%;
 
     a {
-      width: 18%;
-      margin: 10px 0;
+      width: 180px;
+      margin: 5px 0;
     }
     img {
       width: 100%;
+      height: 100%;
     }
+  }
+}
+
+section.careers {
+  ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    font-family: 'Cabin', sans-serif;
+  }
+  ul.offers {
+
+  }
+
+  ul.jobs {
   }
 }
