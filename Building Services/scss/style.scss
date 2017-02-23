@@ -165,25 +165,28 @@ main {
       border-bottom: 1px solid #FFF;
 
       &.welcome {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
       }
     }
 
     h2 {
       @extend h1;
       font-size: 2rem;
+      background-color: #FFF;
     }
   }
   .company {
     display: flex;
-
+    align-items: center;
+    margin-top: 30px;
 
     img {
-      flex: 1 0 15%;
+      width: 350px;
+      height: 350px;
     }
 
     p {
-      flex: 2 0 40%;
+
     }
   }
 
@@ -329,6 +332,7 @@ section.projects {
       text-align: left;
       border-bottom: 2px solid #FFF;
       margin: 0;
+      background-color: transparent;
     }
 
     time {
@@ -397,15 +401,73 @@ section.clients {
 
 section.careers {
   ul {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
     font-family: 'Cabin', sans-serif;
+    margin: 50px 0;
   }
-  ul.offers {
 
+  ul.offers {
+    font-size: 1.1rem;
+    display: block;
+    width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+
+    li {
+      width: 150px;
+      height: 150px;
+      background-color: #90CEF2;
+      border-radius: 50%;
+      float: left;
+      text-align: center;
+      list-style: none;
+      margin: 5px;
+    }
+
+    a {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: #000;
+    }
   }
 
   ul.jobs {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+
+    li {
+      border: 1px solid #FFF;
+      flex: 1 0 20%;
+      text-align: center;
+      min-height: 80px;
+      background-color: lighten(#FEA906, 25%);
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: #343436;
+      width: 100%;
+      height: 100%;
+
+      &:hover {
+        background-color: #FFF;
+        font-size: 1.8rem;
+        transition: font-size 0.5s;
+      }
+    }
+  }
+
+  h2 {
+    text-transform: uppercase;
+    margin-top: 50px;
   }
 }

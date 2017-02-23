@@ -128,15 +128,17 @@ main {
       padding-bottom: 30px;
       border-bottom: 1px solid #FFF; }
       main section p.welcome {
-        font-size: 1.4rem; }
+        font-size: 1.3rem; }
     main section h2 {
-      font-size: 2rem; }
+      font-size: 2rem;
+      background-color: #FFF; }
   main .company {
-    display: flex; }
+    display: flex;
+    align-items: center;
+    margin-top: 30px; }
     main .company img {
-      flex: 1 0 15%; }
-    main .company p {
-      flex: 2 0 40%; }
+      width: 350px;
+      height: 350px; }
   main button.close-btn {
     padding: 10px;
     background-color: #FFF;
@@ -236,7 +238,8 @@ section.projects .post {
   section.projects .post h2 {
     text-align: left;
     border-bottom: 2px solid #FFF;
-    margin: 0; }
+    margin: 0;
+    background-color: transparent; }
   section.projects .post time {
     text-align: right;
     display: block;
@@ -282,7 +285,58 @@ section.clients {
       height: 100%; }
 
 section.careers ul {
+  font-family: 'Cabin', sans-serif;
+  margin: 50px 0; }
+
+section.careers ul.offers {
+  font-size: 1.1rem;
+  display: block;
+  width: 640px;
+  margin-left: auto;
+  margin-right: auto; }
+  section.careers ul.offers li {
+    width: 150px;
+    height: 150px;
+    background-color: #90CEF2;
+    border-radius: 50%;
+    float: left;
+    text-align: center;
+    list-style: none;
+    margin: 5px; }
+  section.careers ul.offers a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #000; }
+
+section.careers ul.jobs {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   list-style: none;
-  font-family: 'Cabin', sans-serif; }
+  flex-wrap: wrap;
+  font-size: 1.5rem; }
+  section.careers ul.jobs li {
+    border: 1px solid #FFF;
+    flex: 1 0 20%;
+    text-align: center;
+    min-height: 80px;
+    background-color: #ffd585; }
+  section.careers ul.jobs a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #343436;
+    width: 100%;
+    height: 100%; }
+    section.careers ul.jobs a:hover {
+      background-color: #FFF;
+      font-size: 1.8rem;
+      transition: font-size 0.5s; }
+
+section.careers h2 {
+  text-transform: uppercase;
+  margin-top: 50px; }
