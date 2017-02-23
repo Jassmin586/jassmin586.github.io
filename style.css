@@ -135,45 +135,69 @@ body {
     }
 
       .skills ul li {
-        width: 120px;
-        height: 120px;
+        width: 150px;
+        height: 150px;
         border-radius: 50%;
         margin: 5px;
         display: inline-block;
-        text-indent: -9000px;
         border: 2px solid #FFF;
-        box-shadow: 0px 0px 20px 3px #FFF;
-        background: url(Graphics/sprites.png) no-repeat;
+        background-color: #FFF;
+        text-align: center;
       }
 
-      .skills ul li:first-child {
-        background-position: 0 0;
+        .skills li span {
+          background: url(Graphics/sprites.png) no-repeat;
+          display: inline-block;
+          text-indent: -9000px;
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+      .skills li span.icon-html {
+        width: 120px;
+        height: 120px;
+        background-position: -5px -5px;
       }
 
-      .skills ul li:nth-child(2) {
-        background-position: -596px 0;
+      .skills li span.icon-css {
+        width: 120px;
+        height: 120px;
+        background-position: -265px -5px;
       }
 
-      .skills ul li:nth-child(3) {
-        background-position: -121px 0;
+      .skills li span.icon-js {
+        width: 120px;
+        height: 120px;
+        background-position: -135px -5px;
       }
 
-      .skills ul li:nth-child(4) {
-        background-position: -484px 0;
+      .skills li span.icon-rwd {
+        width: 90px;
+        height: 120px;
+        background-position: -588px -5px;
       }
-      .skills ul li:nth-child(5) {
-        background-position: -800px 0;
-      }
-
-      .skills ul li:nth-child(6) {
-        background-position: -242px 0;
-      }
-      .skills ul li:nth-child(7) {
-        background-position: -363px 0;
+      .skills li span.icon-jq {
+        width: 120px;
+        height: 120px;
+        background-position: -458px -5px;
       }
 
-      .skills ul li:last-child {
-        background-position: -701px 0;
+      .skills li span.icon-wp {
+        width: 120px;
+        height: 120px;
+        background-position: -818px -5px;
+      }
+      .skills li span.icon-sass {
+        width: 120px;
+        height: 90px;
+        background-position: -688px -5px;
+      }
+
+      .skills li span.icon-gulp {
+        width: 53px;
+        height: 120px;
+        background-position: -395px -5px;
       }
 
   main section.about .hello-paragraphs {
@@ -187,6 +211,7 @@ body {
     padding-right: 6px;
     padding-top: 15px;
     padding-bottom: 15px;
+    line-height: 25px;
     margin: 0;
     background-color: rgba(255,255,255,0.95);
   }
@@ -289,7 +314,7 @@ body {
   section.projects .information a {
     display: inline-block;
     padding: 10px;
-    background-color: #FFF;
+    background-color: lightgray;
     font-size: 1.5em;
     color: #000;
     text-decoration: none;
@@ -301,6 +326,10 @@ body {
     border-radius: 0px;
     border: 3px solid rgba(0, 0, 0, 0.7);
   }
+
+    section.projects .information a:hover {
+      background-color: #FFF;
+    }
 
   section.projects .information p {
     display: block;
