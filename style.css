@@ -577,7 +577,9 @@ body {
 
     main section.projects .blog,
     main section.projects .psd,
-    main section.projects .one-page {
+    main section.projects .one-page,
+    main section.projects .site,
+    main section.projects .calculator {
       padding: 0;
       margin-bottom: 50px;
       width: 100%;
