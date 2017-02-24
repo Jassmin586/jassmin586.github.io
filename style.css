@@ -580,6 +580,11 @@ body {
     main section.projects .one-page {
       padding: 0;
       margin-bottom: 50px;
+      width: 100%;
+    }
+
+    main section.projects p {
+      margin: 10px;
     }
 
     main section.projects .interactive-image,
