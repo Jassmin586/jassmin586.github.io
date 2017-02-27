@@ -75,10 +75,12 @@ nav {
       overflow: hidden; }
       nav li a:hover {
         background-color: #90CEF2;
+        border: 10px solid rgba(34, 29, 30, 0.7);
+        box-sizing: border-box;
         animation: fade-in 1s; }
       nav li a:hover span {
         margin-left: 0px;
-        transition: margin-left 1s; }
+        transition: margin-left 0.8s; }
     nav li span {
       margin-left: -600px;
       width: 250px; }
@@ -391,12 +393,77 @@ section.gallery {
   section.gallery h2 {
     margin-bottom: 50px; }
   section.gallery .img-group {
-    height: 100%; }
+    margin-bottom: 50px;
+    overflow-y: auto;
+    overflow-x: hidden; }
   section.gallery figure {
-    display: flex;
-    max-height: 27%; }
+    display: flex; }
+    section.gallery figure figcaption,
+    section.gallery figure img.photo {
+      box-sizing: border-box; }
     section.gallery figure figcaption {
-      width: 25%;
-      background-color: #ffd585; }
-    section.gallery figure img {
-      width: 25%; }
+      border: 30px solid #ffd585;
+      flex: 2 0 20%;
+      background-color: #ffe6b8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      text-align: center; }
+    section.gallery figure img.photo {
+      flex: 1 0 20%;
+      border: 1px solid #FFF; }
+      section.gallery figure img.photo:hover {
+        cursor: pointer;
+        border: 5px solid #FFF; }
+
+.big-photo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%; }
+
+section.contact h2 {
+  margin-bottom: 50px; }
+
+section.contact .form-row {
+  width: 40%;
+  display: flex;
+  margin: 3px 0 0 50px; }
+  section.contact .form-row label {
+    width: 100px; }
+  section.contact .form-row input[type='text'],
+  section.contact .form-row input[type='email'] {
+    background-color: #FFFFFF;
+    border: 1px solid #D6D9DC;
+    border-radius: 3px;
+    width: 100%;
+    padding: 7px;
+    font-size: 14px;
+    box-sizing: border-box; }
+  section.contact .form-row input[type='text']:invalid,
+  section.contact .form-row input[type='email']:invalid {
+    border: 1px solid #D55C5F;
+    color: #D55C5F;
+    box-shadow: none; }
+  section.contact .form-row textarea {
+    border: 1px solid #D6D9DC;
+    border-radius: 3px;
+    min-height: 200px;
+    margin-bottom: 10px;
+    padding: 7px;
+    resize: none;
+    width: 100%; }
+  section.contact .form-row button.send {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #5995DA;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 40px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto; }
