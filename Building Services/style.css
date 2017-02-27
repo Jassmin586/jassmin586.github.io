@@ -38,7 +38,7 @@ nav {
     width: 250px;
     border-radius: 25px;
     list-style: none; }
-    nav li:not(#photos-group):not(#logo) {
+    nav li:not(.photos-group):not(.logo) {
       background-image: url("graphics/menu.jpg");
       background-repeat: no-repeat; }
     nav li:first-child {
@@ -57,8 +57,8 @@ nav {
       background-position: -500px; }
     nav li:nth-child(8) {
       background-position: -750px; }
-    nav li:last-child {
-      background-image: url("graphics/logo.png"); }
+    nav li img.logoImg {
+      border-radius: 25px; }
     nav li a {
       height: 100%;
       display: flex;
@@ -117,10 +117,21 @@ main {
     opacity: 0;
     flex-direction: column;
     overflow: hidden; }
-    main section h1, main section h2 {
+    main section h2 {
       font-size: 2.5rem;
       text-align: center;
-      font-family: 'Cabin', sans-serif; }
+      font-family: 'Cabin', sans-serif;
+      width: 100%; }
+      main section h2::after {
+        content: "";
+        border-top: 3px solid #FFF;
+        display: block;
+        margin-top: -20px;
+        height: 1px;
+        width: 100%; }
+    main section span.line {
+      background-color: #FFEDB3;
+      padding: 0 30px; }
     main section p {
       font-family: 'PT Sans', sans-serif;
       font-size: 1.1rem;
@@ -129,7 +140,10 @@ main {
       border-bottom: 1px solid #FFF; }
       main section p.welcome {
         font-size: 1.3rem; }
-    main section h2 {
+    main section h3 {
+      font-size: 2.5rem;
+      text-align: center;
+      font-family: 'Cabin', sans-serif;
       font-size: 2rem;
       background-color: #FFF; }
   main .company {
@@ -226,7 +240,7 @@ section.services {
       cursor: pointer;
       border: 3px dotted #FFF; }
 
-section.projects h1, main section.projects h2 {
+section.projects h2 {
   margin-bottom: 30px; }
 
 section.projects .all-posts {
@@ -235,7 +249,7 @@ section.projects .all-posts {
 section.projects .post {
   display: block;
   margin: 0 50px 50px 50px; }
-  section.projects .post h2 {
+  section.projects .post h3 {
     text-align: left;
     border-bottom: 2px solid #FFF;
     margin: 0;
@@ -273,44 +287,76 @@ section.clients {
   section.clients .clients-logo {
     margin: 0 50px 50px 50px;
     display: flex;
-    flex-wrap: wrap-reverse;
-    justify-content: space-around;
-    align-content: center;
-    width: 70%; }
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center; }
     section.clients .clients-logo a {
       width: 180px;
-      margin: 5px 0; }
+      margin: 20px; }
     section.clients .clients-logo img {
       width: 100%;
       height: 100%; }
 
 section.careers ul {
   font-family: 'Cabin', sans-serif;
-  margin: 50px 0; }
+  margin-top: 80px; }
 
 section.careers ul.offers {
   font-size: 1.1rem;
-  display: block;
-  width: 640px;
-  margin-left: auto;
-  margin-right: auto; }
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
   section.careers ul.offers li {
     width: 150px;
     height: 150px;
-    background-color: #90CEF2;
-    border-radius: 50%;
     float: left;
     text-align: center;
-    list-style: none;
-    margin: 5px; }
+    list-style: none; }
   section.careers ul.offers a {
+    border-radius: 30%;
+    border: 1px solid #FFF;
+    background-color: #90CEF2;
     width: 100%;
     height: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
     text-decoration: none;
-    color: #000; }
+    color: #000;
+    position: relative;
+    z-index: 0;
+    transition: transform, background-color, border-radius;
+    transition-duration: 1s; }
+    section.careers ul.offers a:hover {
+      transform: scale(1.4);
+      background-color: #FFF;
+      border-radius: 10%;
+      z-index: 1;
+      border: 1px solid #90CEF2;
+      padding: 0 5px; }
+    section.careers ul.offers a:hover p.opp:not(:last-of-type) {
+      visibility: hidden;
+      opacity: 0; }
+    section.careers ul.offers a:hover p.description {
+      visibility: visible;
+      opacity: 1; }
+  section.careers ul.offers p {
+    border: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    transition: opacity 1s;
+    height: 100%;
+    align-items: center;
+    justify-content: center; }
+  section.careers ul.offers p.opp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1; }
+  section.careers ul.offers p.description {
+    visibility: hidden;
+    opacity: 0; }
 
 section.careers ul.jobs {
   display: flex;
@@ -337,6 +383,20 @@ section.careers ul.jobs {
       font-size: 1.8rem;
       transition: font-size 0.5s; }
 
-section.careers h2 {
-  text-transform: uppercase;
-  margin-top: 50px; }
+section.careers h3 {
+  text-transform: uppercase; }
+
+section.gallery {
+  display: flex; }
+  section.gallery h2 {
+    margin-bottom: 50px; }
+  section.gallery .img-group {
+    height: 100%; }
+  section.gallery figure {
+    display: flex;
+    max-height: 27%; }
+    section.gallery figure figcaption {
+      width: 25%;
+      background-color: #ffd585; }
+    section.gallery figure img {
+      width: 25%; }
