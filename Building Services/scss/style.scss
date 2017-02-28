@@ -590,17 +590,26 @@ section.contact {
     margin-bottom: 50px;
   }
 
+  form.contact-form {
+    width: 50%;
+    display: inline-block;
+  }
+
+  h3 {
+    margin-bottom: 50px;
+  }
+
   .form-row {
-    width: 40%;
     display: flex;
-    margin: 3px 0 0 50px;
+    margin: 6px 0 0 50px;
 
     label {
       width: 100px;
     }
 
     input[type='text'],
-    input[type='email'] {
+    input[type='email'],
+    input[type='tel'] {
       background-color: #FFFFFF;
       border: 1px solid #D6D9DC;
       border-radius: 3px;
@@ -608,13 +617,6 @@ section.contact {
       padding: 7px;
       font-size: 14px;
       box-sizing: border-box;
-    }
-
-    input[type='text']:invalid,
-    input[type='email']:invalid {
-      border: 1px solid #D55C5F;
-      color: #D55C5F;
-      box-shadow: none;
     }
 
     textarea {
@@ -631,7 +633,7 @@ section.contact {
       font-size: 1rem;
       font-weight: bold;
       color: #FFFFFF;
-      background-color: #5995DA;
+      background-color: #90CEF2;
       border: none;
       border-radius: 3px;
       padding: 10px 40px;
@@ -639,5 +641,62 @@ section.contact {
       display: block;
       margin: 0 auto;
     }
+  }
+
+  span.info {
+    margin-left: 125px;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .map {
+    height: 400px;
+    background-color: grey;
+    border: 5px solid #FFF;
+    box-shadow: 0 0 5px 8px #FFF;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+
+  .address {
+    vertical-align: top;
+    margin-left: 7%;
+    display: inline-block;
+    width: 40%;
+  }
+
+  .c-address {
+    display: block;
+    font-size: 1.1rem;
+  }
+
+  .c-name {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    line-height: 50px;
+    font-weight: 700;
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+
+  span {
+    display: inline-block;
+    padding: 0 50px;
+  }
+
+  .tel {
+    border-right: 5px solid $section-bg;
+  }
+
+  .email {
+    border-left: 5px solid $section-bg;
   }
 }

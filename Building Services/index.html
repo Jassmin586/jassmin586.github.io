@@ -261,32 +261,55 @@
           <span>X</span>
         </button>
         <h2><span class="line">Contact<span/></h2>
-        <form class="" action="" method="post">
-          <div class="form-row">
-            <label for="name">Name</label>
-            <input type="text" name="name" value="" id="name" />
+        <div class="contact-content">
+          <form class="contact-form">
+            <h3>Send us your message</h3>
+            <div class="form-row">
+              <label for="name">Name *</label>
+              <input type="text" name="name" value="" id="name" required/>
+            </div>
+            <div class="form-row">
+              <label for="email">E-mail *</label>
+              <input type="email" name="email" placeholder="tom@example.com" id="email" required/>
+            </div>
+            <div class="form-row">
+              <label for="telephone">Telephone</label>
+              <input type="tel" name="telephone" placeholder="" id="telephone"/>
+            </div>
+            <div class="form-row">
+              <label for="subject">Subject *</label>
+              <input type="text" name="subject" value="" id="subject" required/>
+            </div>
+            <div class="form-row">
+              <label for="message">Message *</label>
+              <textarea name="message" id="message" required></textarea>
+            </div>
+            <span class="info">* is required</span>
+            <div class="form-row">
+              <button type="submit" class="send">Send</button>
+            </div>
+          </form>
+          <div class="address">
+            <div id="map" class="map"></div>
+            <address>
+              <span class="c-name">Building Services</span>
+              <span class="c-address">1243 Road</span>
+              <span class="c-address">London, SW1 000</span>
+              <span class="c-address">Tel: 01000 123 456</span>
+              <span class="c-address">Fax: 01000 123 456</span>
+              <span class="c-address">Email: contact@example.com</span>
+            </address>
           </div>
-          <div class="form-row">
-            <label for="email">E-mail</label>
-            <input type="email" name="email" placeholder="tom@example.com" id="email" />
-          </div>
-          <div class="form-row">
-            <label for="subject">Subject</label>
-            <input type="text" name="subject" value="" id="subject" />
-          </div>
-          <div class="form-row">
-            <label for="message">Message</label>
-            <textarea name="message" id="message"></textarea>
-          </div>
-          <div class="form-row">
-            <button type="button" class="send">Send</button>
-          </div>
-        </form>
-        <address class="address">
-        </address>
+        </div>
       </section>
     </main>
+    <footer>
+      <span class="tel">Call: 01000 123 456</span>
+      <span class="copyright">SERVICE BUILDINGS © 2017</span>
+      <span class="email">Email: contact@example.com</span>
+    </footer>
   </div>
   <script src="js/script.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlKdzxenb6Yvj7PGM4-wHgDy15e8St8_c&callback=initMap"></script>
 </body>
 </html>
