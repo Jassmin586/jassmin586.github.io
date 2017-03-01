@@ -18,24 +18,75 @@
     #container header img.dec {
       position: absolute; }
     #container header img.builder {
-      bottom: -90px;
-      right: -198px; }
+      bottom: -20%;
+      right: -31%;
+      width: 55%; }
     #container header img.arrow {
-      top: 125px;
-      left: -160px;
+      top: 16%;
+      left: -21%;
       width: 20%; }
 
 nav {
-  width: 775px;
-  height: 775px; }
+  width: 675px;
+  height: 675px; }
+  @media (max-height: 730px) and (min-height: 630px) {
+    nav {
+      width: 575px;
+      height: 575px;
+      font-size: 0.8rem; } }
+  @media (max-height: 629px) and (min-height: 530px) {
+    nav {
+      width: 475px;
+      height: 475px;
+      font-size: 0.7rem; } }
+  @media (max-height: 529px) and (min-height: 430px) {
+    nav {
+      width: 375px;
+      height: 375px;
+      font-size: 0.5rem; } }
+  @media (max-height: 429px) and (min-height: 330px) {
+    nav {
+      width: 275px;
+      height: 275px;
+      font-size: 0.4rem; } }
+  @media (max-height: 329px) and (min-height: 0px) {
+    nav {
+      width: 175px;
+      height: 175px;
+      font-size: 0.3rem; } }
+  @media (max-width: 1100px) and (min-width: 930px) {
+    nav {
+      width: 575px;
+      height: 575px;
+      font-size: 0.8rem; } }
+  @media (max-width: 929px) and (min-width: 770px) {
+    nav {
+      width: 475px;
+      height: 475px;
+      font-size: 0.7rem; } }
+  @media (max-width: 769px) and (min-width: 610px) {
+    nav {
+      width: 375px;
+      height: 375px;
+      font-size: 0.5rem; } }
+  @media (max-width: 609px) and (min-width: 450px) {
+    nav {
+      width: 275px;
+      height: 275px;
+      font-size: 0.4rem; } }
+  @media (max-width: 449px) and (min-width: 0px) {
+    nav {
+      width: 175px;
+      height: 175px;
+      font-size: 0.2rem; } }
   nav ul {
     height: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around; }
   nav li {
-    height: 250px;
-    width: 250px;
+    height: 32%;
+    width: 32%;
     border-radius: 25px;
     list-style: none; }
     nav li:not(.photos-group):not(.logo) {
@@ -44,21 +95,23 @@ nav {
     nav li:first-child {
       background-position: 0 0; }
     nav li:nth-child(2) {
-      background-position: -250px 0; }
+      background-position: -248px 0; }
     nav li:nth-child(3) {
-      background-position: -500px 0; }
+      background-position: -496px 0; }
     nav li:nth-child(4) {
-      background-position: -250px; }
+      background-position: 0 -248px; }
     nav li:nth-child(5) {
-      background-position: -500px; }
+      background-position: -248px -248px; }
     nav li:nth-child(6) {
-      background-position: -750px; }
+      background-position: -496px -248px; }
     nav li:nth-child(7) {
-      background-position: -500px; }
+      background-position: -496px; }
     nav li:nth-child(8) {
-      background-position: -750px; }
+      background-position: -744px; }
     nav li img.logoImg {
-      border-radius: 25px; }
+      border-radius: 25px;
+      width: 100%;
+      height: 100%; }
     nav li a {
       height: 100%;
       display: flex;
@@ -75,7 +128,7 @@ nav {
       overflow: hidden; }
       nav li a:hover {
         background-color: #90CEF2;
-        border: 10px solid rgba(34, 29, 30, 0.7);
+        border: 5px solid rgba(34, 29, 30, 0.7);
         box-sizing: border-box;
         animation: fade-in 1s; }
       nav li a:hover span {
@@ -83,10 +136,10 @@ nav {
         transition: margin-left 0.8s; }
     nav li span {
       margin-left: -600px;
-      width: 250px; }
+      width: 100%; }
     nav li img.galleryPhoto {
-      height: 250px;
-      width: 250px;
+      height: 100%;
+      width: 100%;
       border-radius: 25px;
       display: none;
       animation: fade-in 1s; }
@@ -512,5 +565,11 @@ footer {
     padding: 0 50px; }
   footer .tel {
     border-right: 5px solid #FFEDB3; }
+    @media (max-width: 870px) {
+      footer .tel {
+        border-right: none; } }
   footer .email {
     border-left: 5px solid #FFEDB3; }
+    @media (max-width: 870px) {
+      footer .email {
+        border-left: none; } }

@@ -23,3 +23,19 @@
   background-color: lighten(#FEA906, 25%);
   font-size: 1.5rem;
 }
+
+@mixin mobile-size-hnav ($width, $height, $min-height, $max-height, $font-size) {
+  @media (max-height: $max-height) and (min-height: $min-height) {
+    width: $width;
+    height: $height;
+    font-size: $font-size;
+  }
+}
+
+@mixin mobile-size-wnav ($width, $height, $min-width, $max-width, $font-size) {
+  @media (max-width: $max-width) and (min-width: $min-width) {
+    width: $width;
+    height: $height;
+    font-size: $font-size;
+  }
+}

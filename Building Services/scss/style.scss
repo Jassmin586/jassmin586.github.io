@@ -1,7 +1,7 @@
 @import "keyframes-mixins";
 
-$menu-size: 775px;
-$tile-size: 250px;
+$menu-size: 675px;
+$tile-size: 32%;
 $tile-border: 25px;
 $section-bg: #FFEDB3;
 
@@ -23,13 +23,14 @@ $section-bg: #FFEDB3;
     }
 
     img.builder {
-      bottom: -90px;
-      right: -198px;
+      bottom: -20%;
+      right: -31%;
+      width: 55%;
     }
 
     img.arrow {
       top: $tile-size/2;
-      left: -160px;
+      left: -21%;
       width: 20%;
     }
   }
@@ -38,6 +39,16 @@ $section-bg: #FFEDB3;
 nav {
   width: $menu-size;
   height: $menu-size;
+  @include mobile-size-hnav(575px, 575px, 630px, 730px, 0.8rem);
+  @include mobile-size-hnav(475px, 475px, 530px, 629px, 0.7rem);
+  @include mobile-size-hnav(375px, 375px, 430px, 529px, 0.5rem);
+  @include mobile-size-hnav(275px, 275px, 330px, 429px, 0.4rem);
+  @include mobile-size-hnav(175px, 175px, 0px, 329px, 0.3rem);
+  @include mobile-size-wnav(575px, 575px, 930px, 1100px, 0.8rem);
+  @include mobile-size-wnav(475px, 475px, 770px, 929px, 0.7rem);
+  @include mobile-size-wnav(375px, 375px, 610px, 769px, 0.5rem);
+  @include mobile-size-wnav(275px, 275px, 450px, 609px, 0.4rem);
+  @include mobile-size-wnav(175px, 175px, 0px, 449px, 0.2rem);
 
   ul {
     @include display(100%,flex);
@@ -58,29 +69,31 @@ nav {
       background-position: 0 0;
     }
     &:nth-child(2){
-      background-position: -$tile-size 0;
+      background-position: -248px 0;
     }
     &:nth-child(3){
-      background-position: -($tile-size*2) 0;
+      background-position: -(248px*2) 0;
     }
     &:nth-child(4){
-      background-position: 0 -$tile-size;
+      background-position: 0 -248px;
     }
     &:nth-child(5){
-      background-position: -$tile-size -$tile-size;
+      background-position: -248px -248px;
     }
     &:nth-child(6){
-      background-position: -($tile-size*2) -$tile-size;
+      background-position: -(248px*2) -248px;
     }
     &:nth-child(7){
-      background-position: 0 -($tile-size*2);
+      background-position: 0 -(248px*2);
     }
     &:nth-child(8){
-      background-position: -$tile-size -($tile-size*2);
+      background-position: -248px -(248px*2);
     }
 
     img.logoImg {
       border-radius: 25px;
+      width: 100%;
+      height: 100%;
     }
 
     a {
@@ -99,7 +112,7 @@ nav {
 
       &:hover {
         background-color: #90CEF2;
-        border: 10px solid rgba(#221D1E, 0.7);
+        border: 5px solid rgba(#221D1E, 0.7);
         box-sizing: border-box;
         animation: fade-in 1s;
       }
@@ -112,11 +125,11 @@ nav {
 
     span {
       margin-left: -600px;
-      width: $tile-size;
+      width: 100%;
     }
 
     img.galleryPhoto {
-      @include tile($tile-size,$tile-size, $tile-border);
+      @include tile(100%,100%, $tile-border);
       display: none;
       animation: fade-in 1s;
 
@@ -694,9 +707,15 @@ footer {
 
   .tel {
     border-right: 5px solid $section-bg;
+    @media (max-width: 870px) {
+      border-right: none;
+    }
   }
 
   .email {
     border-left: 5px solid $section-bg;
+    @media (max-width: 870px) {
+      border-left: none;
+    }
   }
 }
