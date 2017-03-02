@@ -13,10 +13,19 @@
   display: flex;
   justify-content: center;
   align-items: center; }
+  @media (max-width: 767px) {
+    #container {
+      align-items: flex-start; } }
   #container header {
     position: relative; }
+    @media (max-width: 767px) {
+      #container header {
+        width: 100%; } }
     #container header img.dec {
       position: absolute; }
+      @media (max-width: 767px) {
+        #container header img.dec {
+          display: none; } }
     #container header img.builder {
       bottom: -20%;
       right: -31%;
@@ -29,61 +38,38 @@
 nav {
   width: 675px;
   height: 675px; }
-  @media (max-height: 730px) and (min-height: 630px) {
+  @media (max-height: 730px) and (min-height: 630px), (max-width: 1100px) and (min-width: 930px) {
     nav {
       width: 575px;
       height: 575px;
       font-size: 0.8rem; } }
-  @media (max-height: 629px) and (min-height: 530px) {
+  @media (max-height: 629px) and (min-height: 530px), (max-width: 929px) and (min-width: 768px) {
     nav {
       width: 475px;
       height: 475px;
       font-size: 0.7rem; } }
-  @media (max-height: 529px) and (min-height: 430px) {
+  @media (max-height: 529px) and (min-height: 430px), (max-width: 0) and (min-width: 0) {
     nav {
       width: 375px;
       height: 375px;
       font-size: 0.5rem; } }
-  @media (max-height: 429px) and (min-height: 330px) {
+  @media (max-height: 429px) and (min-height: 0px), (max-width: 0) and (min-width: 0) {
     nav {
-      width: 275px;
-      height: 275px;
-      font-size: 0.4rem; } }
-  @media (max-height: 329px) and (min-height: 0px) {
-    nav {
-      width: 175px;
-      height: 175px;
+      width: 300px;
+      height: 300px;
       font-size: 0.3rem; } }
-  @media (max-width: 1100px) and (min-width: 930px) {
+  @media (max-width: 767px) {
     nav {
-      width: 575px;
-      height: 575px;
-      font-size: 0.8rem; } }
-  @media (max-width: 929px) and (min-width: 770px) {
-    nav {
-      width: 475px;
-      height: 475px;
-      font-size: 0.7rem; } }
-  @media (max-width: 769px) and (min-width: 610px) {
-    nav {
-      width: 375px;
-      height: 375px;
-      font-size: 0.5rem; } }
-  @media (max-width: 609px) and (min-width: 450px) {
-    nav {
-      width: 275px;
-      height: 275px;
-      font-size: 0.4rem; } }
-  @media (max-width: 449px) and (min-width: 0px) {
-    nav {
-      width: 175px;
-      height: 175px;
-      font-size: 0.2rem; } }
+      width: 100%;
+      max-height: 70%; } }
   nav ul {
     height: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around; }
+    @media (max-width: 767px) {
+      nav ul {
+        justify-content: space-between; } }
   nav li {
     height: 32%;
     width: 32%;
@@ -92,6 +78,15 @@ nav {
     nav li:not(.photos-group):not(.logo) {
       background-image: url("graphics/menu.jpg");
       background-repeat: no-repeat; }
+      @media (max-width: 767px) {
+        nav li:not(.photos-group):not(.logo) {
+          background-image: none;
+          background-color: #90CEF2;
+          width: 100%;
+          height: 10%;
+          border-radius: 0;
+          margin-bottom: 5px;
+          order: 3; } }
     nav li:first-child {
       background-position: 0 0; }
     nav li:nth-child(2) {
@@ -112,6 +107,9 @@ nav {
       border-radius: 25px;
       width: 100%;
       height: 100%; }
+      @media (max-width: 767px) {
+        nav li img.logoImg {
+          border-radius: 0; } }
     nav li a {
       height: 100%;
       display: flex;
@@ -126,6 +124,9 @@ nav {
       color: #000;
       text-transform: uppercase;
       overflow: hidden; }
+      @media (max-width: 767px) {
+        nav li a {
+          border-radius: 0; } }
       nav li a:hover {
         background-color: #90CEF2;
         border: 5px solid rgba(34, 29, 30, 0.7);
@@ -137,14 +138,31 @@ nav {
     nav li span {
       margin-left: -600px;
       width: 100%; }
+      @media (max-width: 767px) {
+        nav li span {
+          margin: 0; } }
     nav li img.galleryPhoto {
       height: 100%;
       width: 100%;
       border-radius: 25px;
       display: none;
       animation: fade-in 1s; }
+      @media (max-width: 767px) {
+        nav li img.galleryPhoto {
+          border-radius: 0; } }
       nav li img.galleryPhoto:nth-child(1) {
         display: flex; }
+  @media (max-width: 767px) {
+    nav li.photos-group {
+      order: 2;
+      width: 100px;
+      height: 100px; } }
+  @media (max-width: 767px) {
+    nav li.logo {
+      order: 1;
+      width: 100px;
+      height: 100px;
+      padding-bottom: 5px; } }
 
 .open {
   visibility: visible;
@@ -172,11 +190,30 @@ main {
     opacity: 0;
     flex-direction: column;
     overflow: hidden; }
+    @media (max-width: 767px) {
+      main section {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: baseline;
+        align-content: flex-start;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        border-radius: 0;
+        overflow: auto; } }
     main section h2 {
       font-size: 2.5rem;
       text-align: center;
       font-family: 'Cabin', sans-serif;
       width: 100%; }
+      @media (max-width: 767px) {
+        main section h2 {
+          max-width: 80%;
+          font-size: 2.2rem;
+          padding: 10px 0; } }
       main section h2::after {
         content: "";
         border-top: 3px solid #FFF;
@@ -193,21 +230,42 @@ main {
       margin: 50px;
       padding-bottom: 30px;
       border-bottom: 1px solid #FFF; }
+      @media (max-width: 767px) {
+        main section p {
+          margin: 5px;
+          font-size: 1rem; } }
       main section p.welcome {
         font-size: 1.3rem; }
+        @media (max-width: 767px) {
+          main section p.welcome {
+            font-size: 1.15rem; } }
     main section h3 {
       font-size: 2.5rem;
       text-align: center;
       font-family: 'Cabin', sans-serif;
       font-size: 2rem;
       background-color: #FFF; }
+      @media (max-width: 767px) {
+        main section h3 {
+          width: 100%; } }
   main .company {
     display: flex;
     align-items: center;
     margin-top: 30px; }
+    @media (max-width: 767px) {
+      main .company {
+        display: block;
+        margin-left: 5px;
+        margin-right: 5px; } }
     main .company img {
       width: 350px;
       height: 350px; }
+      @media (max-width: 767px) {
+        main .company img {
+          width: 40%;
+          height: 40%;
+          float: left;
+          margin: 0 5px 5px 0; } }
   main button.close-btn {
     padding: 10px;
     background-color: #FFF;
@@ -228,12 +286,18 @@ main {
 
 section.services {
   align-items: center; }
+  @media (max-width: 767px) {
+    section.services {
+      align-items: baseline; } }
   section.services ul {
     margin: 50px;
     font-family: 'PT Sans', sans-serif;
     display: block;
     width: 100%;
     overflow-y: auto; }
+    @media (max-width: 767px) {
+      section.services ul {
+        margin: 0; } }
   section.services li:first-child a:before {
     font-family: FontAwesome;
     content: "\f275"; }
@@ -258,6 +322,9 @@ section.services {
     margin: 0 50px;
     display: flex;
     flex-direction: column; }
+    @media (max-width: 767px) {
+      section.services li {
+        margin: 0; } }
     section.services li a {
       padding: 10px 20px;
       background-color: #ffd585;
@@ -265,6 +332,9 @@ section.services {
       text-decoration: none;
       color: #000;
       display: block; }
+      @media (max-width: 767px) {
+        section.services li a {
+          font-size: 1.1rem; } }
       section.services li a:before {
         width: 35px;
         display: inline-block; }
@@ -279,9 +349,17 @@ section.services {
     section.services li .p-open {
       display: flex;
       align-items: center; }
+      @media (max-width: 767px) {
+        section.services li .p-open {
+          display: block; } }
     section.services li img {
       width: 30%;
       margin-left: 50px; }
+      @media (max-width: 767px) {
+        section.services li img {
+          margin: 5px;
+          float: left;
+          width: 40%; } }
     section.services li p {
       border: 0;
       padding: 0; }
@@ -291,12 +369,28 @@ section.services {
     font-size: 1.5rem;
     border-radius: 7px;
     margin-bottom: 50px; }
+    @media (max-width: 767px) {
+      section.services button.pdf-button {
+        margin: 0;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        font-size: 1rem;
+        width: 100%;
+        border-radius: 0; } }
     section.services button.pdf-button:hover {
       cursor: pointer;
       border: 3px dotted #FFF; }
 
 section.projects h2 {
   margin-bottom: 30px; }
+  @media (max-width: 767px) {
+    section.projects h2 {
+      font-size: 1.6rem; } }
+
+@media (max-width: 767px) {
+  section.projects span.line {
+    padding: 0 10px; } }
 
 section.projects .all-posts {
   overflow-y: auto; }
@@ -304,6 +398,10 @@ section.projects .all-posts {
 section.projects .post {
   display: block;
   margin: 0 50px 50px 50px; }
+  @media (max-width: 767px) {
+    section.projects .post {
+      margin-left: 5px;
+      margin-right: 5px; } }
   section.projects .post h3 {
     text-align: left;
     border-bottom: 2px solid #FFF;
@@ -339,6 +437,9 @@ section.clients {
   align-items: center; }
   section.clients p {
     font-size: 1.4rem; }
+    @media (max-width: 767px) {
+      section.clients p {
+        font-size: 1.15rem; } }
   section.clients .clients-logo {
     margin: 0 50px 50px 50px;
     display: flex;
@@ -355,6 +456,9 @@ section.clients {
 section.careers ul {
   font-family: 'Cabin', sans-serif;
   margin-top: 80px; }
+  @media (max-width: 767px) {
+    section.careers ul {
+      margin-top: 10px; } }
 
 section.careers ul.offers {
   font-size: 1.1rem;
@@ -367,6 +471,11 @@ section.careers ul.offers {
     float: left;
     text-align: center;
     list-style: none; }
+    @media (max-width: 767px) {
+      section.careers ul.offers li {
+        width: 140px;
+        height: 140px;
+        margin-bottom: 10px; } }
   section.careers ul.offers a {
     border-radius: 30%;
     border: 1px solid #FFF;
@@ -451,6 +560,9 @@ section.gallery {
     overflow-x: hidden; }
   section.gallery figure {
     display: flex; }
+    @media (max-width: 767px) {
+      section.gallery figure {
+        flex-wrap: wrap; } }
     section.gallery figure figcaption,
     section.gallery figure img.photo {
       box-sizing: border-box; }
@@ -477,22 +589,50 @@ section.gallery {
   left: 50%;
   transform: translate(-50%, -50%);
   height: 100%; }
+  @media (max-width: 767px) {
+    .big-photo {
+      order: 5;
+      width: 100%;
+      height: auto; } }
 
 section.contact h2 {
   margin-bottom: 50px; }
+  @media (max-width: 767px) {
+    section.contact h2 {
+      margin-bottom: 0; } }
+
+@media (max-width: 767px) {
+  section.contact .contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; } }
 
 section.contact form.contact-form {
   width: 50%;
   display: inline-block; }
+  @media (max-width: 767px) {
+    section.contact form.contact-form {
+      width: 100%;
+      order: 2; } }
 
 section.contact h3 {
   margin-bottom: 50px; }
+  @media (max-width: 767px) {
+    section.contact h3 {
+      margin-top: 50px; } }
 
 section.contact .form-row {
   display: flex;
   margin: 6px 0 0 50px; }
+  @media (max-width: 767px) {
+    section.contact .form-row {
+      margin-left: 10px; } }
   section.contact .form-row label {
     width: 100px; }
+    @media (max-width: 767px) {
+      section.contact .form-row label {
+        width: 150px; } }
   section.contact .form-row input[type='text'],
   section.contact .form-row input[type='email'],
   section.contact .form-row input[type='tel'] {
@@ -541,6 +681,10 @@ section.contact .address {
   margin-left: 7%;
   display: inline-block;
   width: 40%; }
+  @media (max-width: 767px) {
+    section.contact .address {
+      width: 100%;
+      margin-left: 5px; } }
 
 section.contact .c-address {
   display: block;
@@ -560,6 +704,9 @@ footer {
   width: 100%;
   padding: 10px;
   box-sizing: border-box; }
+  @media (max-height: 400px) {
+    footer {
+      display: none; } }
   footer span {
     display: inline-block;
     padding: 0 50px; }
