@@ -15,6 +15,7 @@ $tile-bg: #90CEF2;
   @include display(100vh,flex);
   justify-content: center;
   align-items: center;
+  overflow: hidden;
   @include smartphone {
     align-items: flex-start;
   }
@@ -221,8 +222,7 @@ main {
     visibility: hidden;
     opacity: 0;
     flex-direction: column;
-    overflow: hidden;
-
+    overflow: auto;
     @include smartphone {
       flex-direction: row;
       justify-content: space-between;
@@ -235,7 +235,13 @@ main {
       left: 0;
       z-index: 1;
       border-radius: 0;
-      overflow: auto;
+    }
+    @include tablet {
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
     }
 
     h2 {
@@ -247,6 +253,9 @@ main {
         max-width: 80%;
         font-size: 2.2rem;
         padding: 10px 0;
+      }
+      @include tablet {
+        font-size: 2.3rem;
       }
 
       &::after {
@@ -280,6 +289,10 @@ main {
         @include smartphone {
           font-size: 1.15rem;
         }
+        @include tablet {
+          font-size: 1.2rem;
+          margin-top: 50px;
+        }
       }
     }
 
@@ -303,6 +316,15 @@ main {
       margin-left: 5px;
       margin-right: 5px;
     }
+    @include tablet {
+      display: block;
+    }
+
+    p {
+      @include tablet {
+        margin-top: 10px;
+      }
+    }
 
     img {
       width: 350px;
@@ -312,6 +334,12 @@ main {
         height: 40%;
         float: left;
         margin: 0 5px 5px 0;
+      }
+      @include tablet {
+        width: 220px;
+        height: 220px;
+        float: left;
+        margin: 0 10px 5px 40px;
       }
     }
   }
@@ -354,6 +382,10 @@ section.services {
     overflow-y: auto;
     @include smartphone {
       margin: 0;
+    }
+    @include tablet {
+      order: 4;
+      margin-top: 30px;
     }
   }
 
@@ -461,6 +493,11 @@ section.services {
       width: 100%;
       border-radius: 0;
     }
+    @include tablet {
+      margin-bottom: 0px;
+      order: 3;
+      margin-top: 50px;
+    }
 
     &:hover {
       cursor: pointer;
@@ -517,6 +554,15 @@ section.projects {
       text-align: center;
     }
 
+    img {
+      width: 230px;
+      height: 230px;
+      @include tablet {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
     p {
       margin: 0;
       border: 0;
@@ -548,6 +594,10 @@ section.clients {
     font-size: 1.4rem;
     @include smartphone {
       font-size: 1.15rem;
+    }
+    @include tablet {
+      font-size: 1.2rem;
+      margin-top: 50px;
     }
   }
 
@@ -585,8 +635,8 @@ section.careers {
     flex-wrap: wrap;
 
     li {
-      width: 150px;
-      height: 150px;
+      width: 130px;
+      height: 130px;
       float: left;
       text-align: center;
       list-style: none;
@@ -697,61 +747,98 @@ section.careers {
 section.gallery {
   display: flex;
 
+  button.close-btn{
+    @include smartphone {
+      align-self: flex-start;
+    }
+  }
+
   h2 {
     margin-bottom: 50px;
   }
 
-  .img-group {
-    margin-bottom: 50px;
-    overflow-y: auto;
-    overflow-x: hidden;
+  .pictures {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 75%;
+    width: 100%;
+    @include smartphone {
+      flex-direction: column;
+      height: 81%;
+    }
   }
 
-  figure {
-    display: flex;
+  .img-group {
+    margin-bottom: 50px;
+    overflow: hidden;
+    height: 100%;
+    flex-basis: 70%;
     @include smartphone {
-      flex-wrap: wrap;
+      margin-bottom: 20px;
     }
 
-    figcaption,
-    img.photo {
-      box-sizing: border-box;
+    figure {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
     }
 
     figcaption {
-      border: 30px solid lighten(#FEA906, 25%);
-      flex: 2 0 20%;
-      background-color: lighten(#FEA906, 35%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      background-color: #ffd585;
       font-size: 1.2rem;
       text-transform: uppercase;
       text-align: center;
+      box-sizing: border-box;
+      padding: 10px;
+      font-weight: 600;
+      border-top: 2px solid #FFF;
+      border-left: 2px solid #FFF;
+      border-right: 2px solid #FFF;
     }
 
     img.photo {
-      flex: 1 0 20%;
-      border: 1px solid #FFF;
-
-      &:hover {
-        cursor: pointer;
-        border: 5px solid #FFF;
-      }
+      width: 100%;
+      border-bottom: 2px solid #FFF;
+      border-left: 2px solid #FFF;
+      border-right: 2px solid #FFF;
+      box-sizing: border-box;
     }
   }
-}
 
-.big-photo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  height: 100%;
-  @include smartphone {
-    order: 5;
-    width: 100%;
-    height: auto;
+  ul.thumbnails {
+    flex-basis: 35%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    list-style: none;
+    justify-content: flex-end;
+    align-content: flex-start;
+    overflow-x: hidden;
+    @include smartphone {
+      overflow-y: hidden;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      align-items: flex-end;
+    }
+
+    a {
+      width: 150px;
+      height: 150px;
+      display: block;
+      border: 2px solid #FFF;
+
+      &:hover {
+        border: 2px solid #000;
+      }
+    }
+
+    img {
+      width: 150px;
+      height: 150px;
+    }
   }
 }
 
@@ -770,12 +857,15 @@ section.contact {
       flex-direction: column;
       align-items: center;
       width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
     }
   }
 
   form.contact-form {
     width: 50%;
     display: inline-block;
+    margin-bottom: 20px;
     @include smartphone {
       width: 100%;
       order: 2;
@@ -793,7 +883,7 @@ section.contact {
     display: flex;
     margin: 6px 0 0 50px;
     @include smartphone {
-      margin-left: 10px;
+      margin-left: 0;
     }
 
     label {
@@ -859,6 +949,7 @@ section.contact {
     margin-left: 7%;
     display: inline-block;
     width: 40%;
+    margin-bottom: 20px;
     @include smartphone {
       width: 100%;
       margin-left: 5px;

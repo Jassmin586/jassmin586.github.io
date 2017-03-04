@@ -74,18 +74,18 @@ var Section = {
 
   pCollapse.events();
 
-  var Gallery = {
-    showPhoto: function(e) {
-      if (e.target.tagName != "FIGCAPTION") {
-        e.target.classList.toggle("big-photo");
-      }
-    },
-    event: function() {
-      document.getElementsByClassName("img-group")[0].addEventListener("click", Gallery.showPhoto);
-    }
-  }
-
-  Gallery.event();
+  // var Gallery = {
+  //   showPhoto: function(e) {
+  //     if (e.target.tagName != "FIGCAPTION") {
+  //       e.target.classList.toggle("big-photo");
+  //     }
+  //   },
+  //   event: function() {
+  //     document.getElementsByClassName("img-group")[0].addEventListener("click", Gallery.showPhoto);
+  //   }
+  // }
+  //
+  // Gallery.event();
 
 // GoogleMaps
 function initMap() {
