@@ -51,17 +51,9 @@ nav {
   width: $menu-size;
   height: $menu-size;
   @include mobile-size-nav(575px, 575px, 630px, 730px, 930px, 1100px, 0.8rem);
-  // @include mobile-size-wnav(475px, 475px, 770px, 929px, 0.7rem);
   @include mobile-size-nav(475px, 475px, 530px, 629px, 768px, 929px, 0.7rem);
   @include mobile-size-nav(375px, 375px, 430px, 529px, 0, 0, 0.5rem);
-  // @include mobile-size-wnav(275px, 275px, 450px, 609px, 0.4rem);
-  // @include mobile-size-nav(300px, 300px, 330px, 429px, 450px, 609px, 0.4rem);
   @include mobile-size-nav(300px, 300px, 0px, 429px, 0, 0, 0.3rem);
-  // @include mobile-size-hnav(575px, 575px, 630px, 730px, 0.8rem);
-  // // @include mobile-size-hnav(475px, 475px, 530px, 629px, 0.7rem);
-  // @include mobile-size-hnav(375px, 375px, 430px, 629px, 0.5rem);
-  // // @include mobile-size-hnav(275px, 275px, 330px, 429px, 0.4rem);
-  // @include mobile-size-hnav(250px, 250px, 0px, 429px, 0.3rem);
   @include smartphone {
     width: 100%;
     max-height: 70%;
@@ -250,8 +242,8 @@ main {
       font-family: 'Cabin', sans-serif;
       width: 100%;
       @include smartphone {
-        max-width: 80%;
-        font-size: 2.2rem;
+        max-width: 90%;
+        font-size: 2rem;
         padding: 10px 0;
       }
       @include tablet {
@@ -271,6 +263,9 @@ main {
     span.line {
       background-color: $section-bg;
       padding: 0 30px;
+      @include smartphone {
+        padding: 0 20px;
+      }
     }
 
     p {
@@ -278,7 +273,6 @@ main {
       font-size: 1.1rem;
       margin: 50px;
       padding-bottom: 30px;
-      border-bottom: 1px solid #FFF;
       @include smartphone {
         margin: 5px;
         font-size: 1rem;
@@ -321,6 +315,7 @@ main {
     }
 
     p {
+      width: 80%;
       @include tablet {
         margin-top: 10px;
       }
@@ -344,24 +339,33 @@ main {
     }
   }
 
+  .heading {
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
   button.close-btn {
     padding: 10px;
     background-color: #FFF;
     border-radius: 50%;
-    margin: 10px;
-    align-self: flex-end;
+    margin: 0 10px 10px 10px;
     justify-content: center;
     align-items: center;
     text-decoration: none;
     color: #000;
     border: none;
+    height: 2rem;
+    box-sizing: content-box;
+    order: 2;
 
     &:hover {
       cursor: pointer;
     }
 
     span {
-      font-size: 2em;
+      font-size: 2rem;
       font-weight: 700;
       font-family: 'Syncopate', sans-serif;
     }
@@ -375,11 +379,13 @@ section.services {
   }
 
   ul {
-    margin: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     font-family: 'PT Sans', sans-serif;
     display: block;
     width: 100%;
     overflow-y: auto;
+    overflow-x: hidden;
     @include smartphone {
       margin: 0;
     }
@@ -459,6 +465,7 @@ section.services {
     .p-open {
       display: flex;
       align-items: center;
+      height: 100%;
       @include smartphone {
         display: block;
       }
@@ -477,6 +484,7 @@ section.services {
     p {
       border: 0;
       padding: 0;
+      width: 70%;
     }
   }
 
@@ -592,6 +600,7 @@ section.clients {
 
   p {
     font-size: 1.4rem;
+    width: 90%;
     @include smartphone {
       font-size: 1.15rem;
     }
@@ -607,6 +616,7 @@ section.clients {
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
+    width: 90%;
 
     a {
       width: 180px;
@@ -631,7 +641,7 @@ section.careers {
   ul.offers {
     font-size: 1.1rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
 
     li {
@@ -795,6 +805,7 @@ section.gallery {
       border-top: 2px solid #FFF;
       border-left: 2px solid #FFF;
       border-right: 2px solid #FFF;
+      z-index: 1;
     }
 
     img.photo {
