@@ -311,6 +311,14 @@ body {
     background-image: url("Graphics/bp-tech.png");
   }
 
+  .calculator .interactive-image .mask::after {
+    background-image: url("Graphics/calc-tech.png");
+  }
+
+  .site .interactive-image .mask::after {
+    background-image: url("Graphics/bs-tech.png");
+  }
+
   main section.projects .information {
     display: block;
     width: 100%;
