@@ -4,7 +4,7 @@ $menu-size: 675px;
 $tile-size: 32%;
 $tile-border: 25px;
 $section-bg: #FFEDB3;
-$tile-bg: #90CEF2;
+$tile-bg: $section-bg;
 
 * {
   margin: 0;
@@ -138,7 +138,7 @@ nav {
 
       &:hover {
         background-color: $tile-bg;
-        border: 5px solid rgba(#221D1E, 0.7);
+        border: 2px solid rgba(#221D1E, 0.7);
         box-sizing: border-box;
         animation: fade-in 1s;
       }
@@ -617,6 +617,7 @@ section.clients {
     justify-content: center;
     align-content: center;
     width: 90%;
+    overflow: auto;
 
     a {
       width: 180px;
@@ -660,7 +661,7 @@ section.careers {
     a {
       border-radius: 30%;
       border: 1px solid #FFF;
-      background-color: #90CEF2;
+      background-color: #ffd585;
       width: 100%;
       height: 100%;
       display: flex;
@@ -677,7 +678,7 @@ section.careers {
         background-color: #FFF;
         border-radius: 10%;
         z-index: 1;
-        border: 1px solid #90CEF2;
+        border: 1px solid #ffd585;
         padding: 0 5px;
       }
 
@@ -1010,4 +1011,16 @@ footer {
       border-left: none;
     }
   }
+}
+
+.ie-message {
+  z-index: 90;
+  background-color: #FFF;
+  text-align: center;
+  border: 5px solid red;
+  font-size: 30px;
+  padding: 30px;
+  display: block;
+  margin-bottom: 1000px;
+  line-height: 1.3;
 }
