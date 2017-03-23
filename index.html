@@ -9,18 +9,25 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<link rel="shortcut icon" href="Graphics/favicon.ico">
-		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link rel="stylesheet" type="text/css" href="style.css">
 		<link href="https://fonts.googleapis.com/css?family=Forum|Gochi+Hand|Alegreya+Sans&subset=latin-ext" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+		<!--[if lte IE 8]>
+	  <div class="ie-message">
+	    <p>IE version 8 and older doesn't supported.</p>
+	    <p>Please update your browser to newest version or download Firefox/Chrome.</p>
+	    <a href="https://www.mozilla.org/pl/firefox/new/">Firefox</a>
+	    <a href="https://www.google.com/chrome">Chrome</a>
+	  </div>
+	  <![endif]-->
 	</head>
-
 	<body>
 		<header>
 			<a class="hamburger">Hamburger</a>
 			<img src="Graphics/myphoto.jpg" alt="My photo" />
 			<h1>Joanna Rządkowska</h1>
 			<nav>
-				<ul>
+				<ul id="menu">
 					<li><a href="#about">O mnie</a></li>
 					<li><a href="#projects">Projekty</a></li>
 					<li><a href="#contact">Kontakt</a></li>
@@ -33,10 +40,9 @@
 				<h2>Witaj!</h2>
 				<div class="hello-paragraphs">
 					<p>Programowaniem zajmuję się hobbistycznie. Projektowałam i wykonywałam strony pod kątem blogów.
-						Kodowałam również gotowe układy z PSDków, One Page oraz wizytówki firm.</p>
-					<p>Strony buduję w oparciu o technologie HTML5 i CSS3 z dodatkiem JavaScriptu i JQuery.
-						Moim podstawowym narzędziem pracy jest edytor Atom.
-						Dodatkowo korzystam z WordPress, Sass, Gulpa. Znam podstawy języka JavaScript.
+						Kodowałam również gotowe układy z PSD, One Page oraz wizytówki firm.
+						Strony buduję w oparciu o technologie HTML5 i CSS3 z dodatkiem JavaScript i JQuery.
+						Dodatkowo korzystam z WordPress, Sass, Gulp. Znam podstawy języka JavaScript.
 						W niedalekiej przyszłości planuję poznać framework Angular.</p>
 					<p>Dodatkowo jestem pasjonatką podróżowania. W wolnym czasie lubię czytać oraz grać w gry planszowe/komputerowe.</p>
 					<p>Szukam pracy na stanowisku Junior Front-end Developer w Poznaniu.</p>
@@ -61,7 +67,7 @@
 			<section class="projects">
 				<h2>Projekty</h2>
 				<h3>Szablony stron internetowych</h3>
-				<div class="one-page">
+				<div class="one-page project">
 					<h4>Projekt strony biura podróży</h4>
 					<div class="interactive-image">
 						<img src="Graphics/bppalma.png" alt="Screenshot BP Palma" />
@@ -72,7 +78,7 @@
 						<a class="show-code" href="https://github.com/Jassmin586/jassmin586.github.io/tree/master/BP-Palma">Kod</a>
 					</div>
 				</div>
-				<div class="psd">
+				<div class="psd project">
 					<h4>Harbour - portfolio na podstawie PSD</h4>
 					<div class="interactive-image">
 						<img src="Graphics/harbour.png" alt="Screenshot Harbour" />
@@ -83,7 +89,7 @@
 						<a class="show-code" href="https://github.com/Jassmin586/jassmin586.github.io/tree/master/Harbour">Kod</a>
 					</div>
 				</div>
-				<div class="blog">
+				<div class="blog project">
 					<h4>Pysznebodomowe.pl - blog kulinarny </h4>
 					<div class="interactive-image">
 						<img src="Graphics/pysznebodomowe.png" alt="Screenshot PyszneBoDomowe" />
@@ -93,7 +99,7 @@
 						<a class="show-site" href="http://pysznebodomowe.pl">Podgląd</a>
 					</div>
 				</div>
-				<div class="site">
+				<div class="site project">
 					<h4>Projekt strony firmy budowlanej</h4>
 					<div class="interactive-image">
 						<img src="Graphics/buildingservices.png" alt="Screenshot Building Services" />
@@ -105,7 +111,7 @@
 					</div>
 				</div>
 				<h3>Aplikacje</h3>
-				<div class="calculator">
+				<div class="calculator project">
 					<h4>Kalkulator</h4>
 					<div class="interactive-image">
 						<img src="Graphics/kalkulator.png" alt="Kalkulator" />

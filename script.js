@@ -1,23 +1,38 @@
 $(document).ready( function() {
 
-  $('ul li a').click(function(){
-    var i = $('ul li a').index(this)+1;
+  $("#menu").on("click", "li:lt(3)", function(e){
+    e.preventDefault();
+    var $i = $(this).index();
       $("html, body").animate( {
-          scrollTop: $("main section:nth-of-type("+i+")").offset().top
+          scrollTop: $("section:eq("+$i+")").offset().top
         }, 400);
   });
 
-  $(".hamburger").click(function(){
-    var hide_nav = $("header nav, footer");
-    if (hide_nav.is(":hidden")){
-      hide_nav.css("animation", "fadein 1s");
-      hide_nav.show();
+  $(".hamburger").on("click", function(){
+    var $hide_nav = $("header nav");
+    if ($hide_nav.is(":hidden")){
+      $hide_nav.css("animation", "fadein 1s").show();
     }
     else {
-
-      hide_nav.css("animation", "fadeout 1s");
-      hide_nav.fadeOut();
+      $hide_nav.css("animation", "fadeout 1s").fadeOut();
     }
   });
 
+  function slideProjects() {
+    var $window = $(window);
+    if ($window.width() > 769) {
+      $window.on("scroll", function(){
+        $(".interactive-image").each(function(index) {
+          if ($(this).offset().top < ($(document).scrollTop() + $(window).height())) {
+            $(".project").eq(index).addClass("project-animate");
+          }
+        });
+      });
+    }
+    else {
+      $(".project").css("left", 0);
+    }
+  }
+
+  slideProjects();
 });

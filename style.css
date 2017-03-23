@@ -1,18 +1,11 @@
 body {
   margin:0;
   padding:0;
-  background-image: -webkit-gradient(linear,
-    left top, left bottom,
-    from(rgba(0, 0, 0, 0.5)),
-    to(rgba(0, 0, 0, 0.3))), url("Graphics/sunset.jpg");
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.3)), url("Graphics/sunset.jpg");
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.3)), url("Graphics/sunset.jpg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: "Lucida Grande", sans-serif;
+  background-image: url("Graphics/sunset.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Lucida Grande", sans-serif;
   }
 
   header,
@@ -118,6 +111,7 @@ body {
     background-color: rgba(0,0,0,0.9);
     padding-right: 0;
     padding-left: 0;
+    padding-top: 30px;
   }
 
     section.about .skills h3 {
@@ -137,14 +131,22 @@ body {
     }
 
       .skills ul li {
-        width: 150px;
-        height: 150px;
+        width: 110px;
+        height: 110px;
         border-radius: 50%;
         margin: 5px;
         display: inline-block;
         border: 2px solid #FFF;
         background-color: #FFF;
         text-align: center;
+        position: relative;
+        animation: skillsFadeIn 2s;
+      }
+
+      @keyframes skillsFadeIn {
+        0% {opacity: 0; top: 50px;}
+        50% {opacity: 0.5; top: -20px;}
+        100% {opacity: 1; top: 0px;}
       }
 
         .skills li span {
@@ -159,49 +161,49 @@ body {
         }
 
       .skills li span.icon-html {
-        width: 120px;
-        height: 120px;
-        background-position: -5px -5px;
+        width: 100px;
+        height: 100px;
+        background-position: 0 0;
       }
 
       .skills li span.icon-css {
-        width: 120px;
-        height: 120px;
-        background-position: -265px -5px;
+        width: 90px;
+        height: 90px;
+        background-position: -205px -5px;
       }
 
       .skills li span.icon-js {
-        width: 120px;
-        height: 120px;
-        background-position: -135px -5px;
+        width: 90px;
+        height: 90px;
+        background-position: -105px -5px;
       }
 
       .skills li span.icon-rwd {
-        width: 90px;
-        height: 120px;
-        background-position: -588px -5px;
+        width: 89px;
+        height: 90px;
+        background-position: -440px -5px;
       }
       .skills li span.icon-jq {
-        width: 120px;
-        height: 120px;
-        background-position: -458px -5px;
+        width: 90px;
+        height: 90px;
+        background-position: -354px -5px;
       }
 
       .skills li span.icon-wp {
-        width: 120px;
-        height: 120px;
-        background-position: -818px -5px;
+        width: 90px;
+        height: 90px;
+        background-position: -630px -5px;
       }
       .skills li span.icon-sass {
-        width: 120px;
-        height: 90px;
-        background-position: -688px -5px;
+        width: 90px;
+        height: 80px;
+        background-position: -520px 0;
       }
 
       .skills li span.icon-gulp {
         width: 53px;
-        height: 120px;
-        background-position: -395px -5px;
+        height: 90px;
+        background-position: -295px -5px;
       }
 
   main section.about .hello-paragraphs {
@@ -220,7 +222,7 @@ body {
     background-color: rgba(255,255,255,0.95);
   }
 
-  main section.about p:nth-of-type(4) {
+  main section.about p:nth-of-type(3) {
     color: #FFF;
     background-color: transparent;
     text-shadow: none;
@@ -228,6 +230,12 @@ body {
     font-weight: 600;
     text-align: center;
     background-color: rgba(0,0,0,0.9);
+    animation: pFadeIn 5s ease-in 5s infinite;
+  }
+
+  @keyframes pFadeIn {
+    0% {color: #FFF;}
+    100% {color: #000;}
   }
 
   main section.projects {
@@ -242,6 +250,17 @@ body {
     display: block;
     width: 75%;
     margin: 0 auto 50px auto;
+  }
+
+  .project {
+    position: relative;
+    left: 1200px;
+    top: 0;
+  }
+
+  .project-animate {
+    left: 0;
+    transition: left 1s;
   }
 
   main section.projects h3 {
@@ -275,7 +294,7 @@ body {
 
   section.projects .interactive-image:hover .mask {
     visibility: visible;
-    opacity: 0.9;
+    opacity: 0.95;
   }
 
   section.projects .interactive-image .mask {
@@ -451,6 +470,18 @@ body {
     margin: 2px;
   }
 
+  .ie-message {
+    z-index: 90;
+    background-color: #FFF;
+    text-align: center;
+    border: 5px solid red;
+    font-size: 30px;
+    padding: 30px;
+    display: block;
+    margin-bottom: 1000px;
+    line-height: 1.3;
+  }
+
   /*--------------------------------------------------------------
   MOBILE
   --------------------------------------------------------------*/
@@ -553,6 +584,14 @@ body {
       min-height: initial;
     }
 
+    .skills ul li {
+      animation: none;
+    }
+
+    section.projects .information a {
+      border: 2px solid #000;
+    }
+
     main section.contact .contact-bg {
       padding: 0;
     }
@@ -607,13 +646,21 @@ body {
       display: block;
     }
 
-    main section.projects .information a:last-of-type {
-      border-top: none;
-    }
   }
 
   @media all and (min-width: 769px) and (max-width: 1300px) and (min-height: 1001px) {
     main section.contact .contact-bg {
       height: 400px;
+    }
+  }
+
+  @media all and (max-width: 400px) {
+    main section.projects h3 {
+      text-align: left;
+      text-indent: 5px;
+    }
+
+    section.contact .contact-type p.e-mail{
+      font-size: 1.4rem;
     }
   }
